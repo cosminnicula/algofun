@@ -12,7 +12,10 @@ public class Main {
 //
 //    System.out.println(atn.run(list1, list2));
 
-    LongestSubstringWithoutRepeatingCharacters2 l = new LongestSubstringWithoutRepeatingCharacters2();
-    System.out.println(l.run("pwwkew"));
+//    LongestSubstringWithoutRepeatingCharacters2 l = new LongestSubstringWithoutRepeatingCharacters2();
+//    System.out.println(l.run("pwwkew"));
+
+    LongestPalindromicSubstring l = new LongestPalindromicSubstring();
+    System.out.println(l.run("abcbd"));
   }
 }
