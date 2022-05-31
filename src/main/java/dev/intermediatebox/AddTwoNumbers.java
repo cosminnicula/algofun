@@ -1,4 +1,4 @@
-package dev.intermediatebox.medium.AddTwoNumbers;
+package dev.intermediatebox;
 
 // You are given two non-empty linked lists representing two non-negative integers.
 // The digits are stored in reverse order, and each of their nodes contains a single digit.
@@ -11,7 +11,7 @@ import java.util.List;
 
 // number1 is 753 -> List.of(3, 5, 7);
 // number2 is  78 -> List.of(8, 7);
-public class AddTwoNumbers1 {
+public class AddTwoNumbers {
   public List<Integer> run(List<Integer> number1, List<Integer> number2) {
     int carry = 0;
     int i = 0;
