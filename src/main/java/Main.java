@@ -1,8 +1,7 @@
-import dev.intermediatebox.Atoi;
-import dev.intermediatebox.IntegerToRoman;
-import dev.intermediatebox.LetterCombinationsOfAPhoneNumber;
+import dev.intermediatebox.*;
 import dev.intermediatebox.LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeatingCharacters1;
 import dev.intermediatebox.LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeatingCharacters2;
+import dev.intermediatebox.utils.Node;
 
 public class Main {
   public static void main(String[] args) {
@@ -22,7 +21,25 @@ public class Main {
 //      Atoi atoi = new Atoi();
 //      System.out.println(atoi.run("-999999999999"));
 
-    IntegerToRoman itr = new IntegerToRoman();
-    System.out.println(itr.run(800));
+//    IntegerToRoman itr = new IntegerToRoman();
+//    System.out.println(itr.run(800));
+
+//    LetterCombinationsOfAPhoneNumber l = new LetterCombinationsOfAPhoneNumber();
+//    System.out.println(l.run("23"));
+
+////    BinaryTreeDepthFirstTraversal btdft = new BinaryTreeDepthFirstTraversal();
+//    BinaryTreeBreadthFirstTraversal btbft = new BinaryTreeBreadthFirstTraversal();
+//    Node head = new Node(1);
+//    head.left = new Node(2);
+//    head.left.left = new Node(3);
+//    head.left.right = new Node(4);
+//    head.right = new Node(5);
+//    head.right.left = new Node(6);
+//
+////    System.out.println(btdft.run(head));
+//    System.out.println(btbft.run(head));
+
+    GenerateParentheses gp = new GenerateParentheses();
+    System.out.println(gp.run(3));
   }
 }
