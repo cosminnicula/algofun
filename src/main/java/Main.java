@@ -1,7 +1,4 @@
 import dev.intermediatebox.*;
-import dev.intermediatebox.LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeatingCharacters1;
-import dev.intermediatebox.LongestSubstringWithoutRepeatingCharacters.LongestSubstringWithoutRepeatingCharacters2;
-import dev.intermediatebox.utils.Node;
 
 public class Main {
   public static void main(String[] args) {
@@ -39,7 +36,19 @@ public class Main {
 ////    System.out.println(btdft.run(head));
 //    System.out.println(btbft.run(head));
 
-    GenerateParentheses gp = new GenerateParentheses();
-    System.out.println(gp.run(3));
+//    GenerateParentheses gp = new GenerateParentheses();
+//    System.out.println(gp.run(3));
+
+//    GroupAnagrams2 ga = new GroupAnagrams2();
+//    System.out.println(ga.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
+
+//    MultiplyStrings ms = new MultiplyStrings();
+//    System.out.println(ms.run("213", "356"));
+
+//    SimplifyPath sp = new SimplifyPath();
+//    System.out.println(sp.run("/some/../path/to/./folder/."));
+
+    WaysToDecode wd = new WaysToDecode();
+    System.out.println(wd.run("221028"));
   }
 }
