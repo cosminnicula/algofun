@@ -5,6 +5,7 @@ import dev.intermediatebox.utils.Node;
 import java.util.ArrayList;
 import java.util.List;
 
+// [recursive]
 public class BinaryTreeDepthFirstTraversal {
   List<Integer> traversed = new ArrayList<>();
 

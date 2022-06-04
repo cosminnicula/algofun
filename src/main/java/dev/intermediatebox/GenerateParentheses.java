@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+// [recursive]
 // Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
 // n = 1 -> "()"

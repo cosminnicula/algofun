@@ -1,5 +1,7 @@
 import dev.intermediatebox.*;
 
+import java.util.List;
+
 public class Main {
   public static void main(String[] args) {
 //    AddTwoNumbers1 atn = new AddTwoNumbers1();
@@ -48,7 +50,19 @@ public class Main {
 //    SimplifyPath sp = new SimplifyPath();
 //    System.out.println(sp.run("/some/../path/to/./folder/."));
 
-    WaysToDecode wd = new WaysToDecode();
-    System.out.println(wd.run("221020"));
+//    WaysToDecode wd = new WaysToDecode();
+//    System.out.println(wd.run("221020"));
+
+//    PalindromPartitioning p = new PalindromPartitioning();
+//    System.out.println(p.run("aab"));
+
+//    WordBreak w = new WordBreak();
+//    System.out.println(w.run("catsandog", List.of("cats", "dog", "sand", "and", "cat")));
+
+//    ReverseWords r = new ReverseWords();
+//    System.out.println(r.run("  a good   example  "));
+
+    LongestSubstringWithAtMostTwoDistinctCharacters l = new LongestSubstringWithAtMostTwoDistinctCharacters();
+    System.out.println(l.run("caaaaaaaabdeeeeeeeeefa"));
   }
 }
