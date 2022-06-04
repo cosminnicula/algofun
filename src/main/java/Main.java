@@ -53,7 +53,7 @@ public class Main {
 //    WaysToDecode wd = new WaysToDecode();
 //    System.out.println(wd.run("221020"));
 
-//    PalindromPartitioning p = new PalindromPartitioning();
+//    PalindromePartitioning p = new PalindromePartitioning();
 //    System.out.println(p.run("aab"));
 
 //    WordBreak w = new WordBreak();
