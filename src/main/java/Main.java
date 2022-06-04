@@ -49,6 +49,6 @@ public class Main {
 //    System.out.println(sp.run("/some/../path/to/./folder/."));
 
     WaysToDecode wd = new WaysToDecode();
-    System.out.println(wd.run("221028"));
+    System.out.println(wd.run("221020"));
   }
 }
