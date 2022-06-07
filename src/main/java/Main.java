@@ -1,5 +1,4 @@
-import dev.intermediatebox.LargestNumber;
-import dev.intermediatebox.OneEditDistance;
+import dev.intermediatebox.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -67,7 +66,35 @@ public class Main {
 //    OneEditDistance o = new OneEditDistance();
 //    System.out.println(o.run("ab", "ab"));
 
-    LargestNumber l = new LargestNumber();
-    System.out.println(l.run(new int[]{3, 30, 34, 5, 9}));
+//    LargestNumber l = new LargestNumber();
+//    System.out.println(l.run(new int[]{3, 30, 34, 5, 9}));
+
+//    TriePrefixTree t = new TriePrefixTree();
+//    t.insert("apple");
+//    t.insert("apples");
+//    System.out.println(t.search("apple"));
+//    System.out.println(t.startsWith("app"));
+//    System.out.println(t.search("app"));
+//    System.out.println(t.search("apples"));
+
+//    WordDictionary t = new WordDictionary();
+//    t.addWord("apple");
+//    t.addWord("apples");
+//    System.out.println(t.search("apple"));
+//    System.out.println(t.search("app."));
+//    System.out.println(t.search("app.."));
+//    System.out.println(t.search("apples"));
+
+//    BasicCalculator2 b = new BasicCalculator2();
+//    System.out.println(b.run("3+5 / 2 "));
+//    System.out.println(b.run("3+ 1+2 *2  "));
+
+//    ShortestWordDistance2 s = new ShortestWordDistance2(new String[] {"practice", "makes", "perfect", "coding", "makes"});
+//    System.out.println(s.shortest("makes", "coding"));
+
+    ReverseWords2 r = new ReverseWords2();
+    char[] words = new char[]{'t', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e'};
+    r.run(words);
+    System.out.println(words);
   }
 }
