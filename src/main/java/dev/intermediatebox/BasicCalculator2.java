@@ -1,4 +1,7 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: Math
+// Tag: Stack
 
 //Given a string s which represents an expression, evaluate this expression and return its value.
 //

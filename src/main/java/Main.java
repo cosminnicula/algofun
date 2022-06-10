@@ -1,4 +1,9 @@
 import dev.intermediatebox.*;
+// Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
+
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
   public static void main(String[] args) {
@@ -92,9 +97,45 @@ public class Main {
 //    ShortestWordDistance2 s = new ShortestWordDistance2(new String[] {"practice", "makes", "perfect", "coding", "makes"});
 //    System.out.println(s.shortest("makes", "coding"));
 
-    ReverseWords2 r = new ReverseWords2();
-    char[] words = new char[]{'t', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e'};
-    r.run(words);
-    System.out.println(words);
+//    ReverseWords2 r = new ReverseWords2();
+//    char[] words = new char[]{'t', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e'};
+//    r.run(words);
+//    System.out.println(words);
+
+//    UniqueWordAbbreviation uniqueWordAbbr = new UniqueWordAbbreviation(new String[]{"deer", "door", "cake", "card"});
+//    System.out.println(uniqueWordAbbr.isUnique("dear")); // return false, dictionary word "deer" and word "dear" have the same abbreviation "d2r" but are not the same.
+//    System.out.println(uniqueWordAbbr.isUnique("cart")); // return true, no words in the dictionary have the abbreviation "c2t".
+//    System.out.println(uniqueWordAbbr.isUnique("cane")); // return false, dictionary word "cake" and word "cane" have the same abbreviation  "c2e" but are not the same.
+//    System.out.println(uniqueWordAbbr.isUnique("make")); // return true, no words in the dictionary have the abbreviation "m2e".
+//    System.out.println(uniqueWordAbbr.isUnique("cake")); // return true, because "cake" is already in the dictionary and no other word in the dictionary has "c2e" abbreviation.
+
+//    EncodeAndDecode encodeAndDecode = new EncodeAndDecode();
+//    List<String> original = Arrays.asList("Hello", "World");
+//    System.out.println(original);
+//    String encoded = encodeAndDecode.encode(original);
+//    System.out.println(encoded);
+//    List<String> decoded = encodeAndDecode.decode(encoded);
+//    System.out.println(decoded);
+
+//    GroupShiftedStrings g = new GroupShiftedStrings();
+//    System.out.println(g.groupStrings(new String[]{"abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"}));
+
+//    RemoveDuplicateLetters r = new RemoveDuplicateLetters();
+//    System.out.println(r.removeDuplicateLetters("cbacdcbc"));
+
+//    AdditiveNumber a = new AdditiveNumber();
+//    System.out.println(a.isAdditiveNumber("112358"));
+
+//    VerifyPreorderSerializationOfABinaryTree v = new VerifyPreorderSerializationOfABinaryTree();
+//    System.out.println(v.isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"));
+
+//    LongestSubstringWithAtMostKDistinctCharacters l = new LongestSubstringWithAtMostKDistinctCharacters();
+//    System.out.println(l.lengthOfLongestSubstringKDistinct("eceba", 2));
+
+//    MiniParser m = new MiniParser();
+//    System.out.println(m.deserialize("[123,[456,[789]]]"));
+
+    DecodeString d = new DecodeString();
+    System.out.println(d.decodeString("3[a2[c]]"));
   }
 }
