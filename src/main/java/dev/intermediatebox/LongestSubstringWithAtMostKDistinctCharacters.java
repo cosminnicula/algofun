@@ -1,4 +1,7 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: SlidingWindow
+// Tag: HashTable
 
 import java.util.Collections;
 import java.util.HashMap;

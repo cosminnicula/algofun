@@ -1,5 +1,8 @@
 package dev.intermediatebox;
-
+// Tag: String
+// Tag: Stack
+// Tag: Tree
+// Tag: BinaryTree
 
 // One way to serialize a binary tree is to use preorder traversal. When we encounter a non-null node, we record the node's value. If it is a null node, we record using a sentinel value such as '#'.
 //For example, the above binary tree can be serialized to the string "9,3,4,#,#,1,#,#,2,#,6,#,#", where '#' represents a null node.

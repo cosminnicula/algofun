@@ -1,4 +1,6 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: DynamicProgramming
 
 // Given a string s, return the longest palindromic substring in s.
 

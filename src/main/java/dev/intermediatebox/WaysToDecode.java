@@ -1,4 +1,6 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: Recursion
 
 // [recursive]
 //A message containing letters from A-Z can be encoded into numbers using the following mapping:

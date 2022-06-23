@@ -1,4 +1,7 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: Trie
+// Tag: HashTable
 
 import dev.intermediatebox.utils.TrieCharNode;
 

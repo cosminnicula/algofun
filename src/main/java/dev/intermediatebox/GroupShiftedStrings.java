@@ -1,4 +1,7 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: HashTable
+// Tag: Array
 
 import java.util.*;
 

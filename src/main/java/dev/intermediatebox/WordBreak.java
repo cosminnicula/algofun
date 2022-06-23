@@ -1,4 +1,9 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: HashTable
+// Tag: DynamicProgramming
+// Tag: Memoization
+
 
 import java.util.HashSet;
 import java.util.List;

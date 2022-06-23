@@ -13,7 +13,7 @@ import java.util.*;
 
 // O(n*k) time complexity, where k is the maximum length of a string
 // O(n*k) space complexity
-public class GroupAnagrams2 {
+public class  GroupAnagrams2 {
   public List<List<String>> groupAnagrams(String[] strings) {
     Map<String, List<String>> anagrams = new HashMap<>();
 

@@ -1,4 +1,7 @@
 package dev.intermediatebox;
+// Tag: String
+// Tag: SlidingWindow
+// Tag: HashTable
 
 // Given a string s, return the length of the longest substring that contains at most two distinct characters.
 
@@ -6,6 +9,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+
 
 // "caaaaaaaabdeeeeeeeeefa" -> 10
 
