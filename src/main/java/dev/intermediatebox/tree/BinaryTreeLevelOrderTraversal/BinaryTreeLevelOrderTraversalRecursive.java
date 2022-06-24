@@ -1,4 +1,4 @@
-package dev.intermediatebox.tree;
+package dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal;
 // Tag: Tree
 // Tag: BinaryTree
 // Tag: Recursion
@@ -8,7 +8,9 @@ import dev.intermediatebox.string.utils.Node;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTreeLevelOrderTraversal {
+// O(n) time complexity
+// O(n) space complexity
+public class BinaryTreeLevelOrderTraversalRecursive {
   List<List<Integer>> levels = new ArrayList<List<Integer>>();
 
   public List<List<Integer>> levelOrder(Node root) {
