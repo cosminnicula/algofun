@@ -1,4 +1,6 @@
 import dev.intermediatebox.string.DecodeString;
+import dev.intermediatebox.string.utils.Node;
+import dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal;
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
@@ -132,7 +134,17 @@ public class Main {
 //    MiniParser m = new MiniParser();
 //    System.out.println(m.deserialize("[123,[456,[789]]]"));
 
-    DecodeString d = new DecodeString();
-    System.out.println(d.decodeString("3[a2[c]]"));
+//    DecodeString d = new DecodeString();
+//    System.out.println(d.decodeString("3[a2[c]]"));
+
+    BinaryTreeLevelOrderTraversal b = new BinaryTreeLevelOrderTraversal();
+    Node root = new Node(3);
+    root.left = new Node(9);
+    root.right = new Node(20);
+    root.right.left = new Node(15);
+    root.right.right = new Node(7);
+
+    var traversal = b.levelOrder(root);
+    System.out.println(traversal);
   }
 }
