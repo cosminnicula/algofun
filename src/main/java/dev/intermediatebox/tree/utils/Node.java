@@ -1,4 +1,4 @@
-package dev.intermediatebox.string.utils;
+package dev.intermediatebox.tree.utils;
 
 public class Node {
   public int value;

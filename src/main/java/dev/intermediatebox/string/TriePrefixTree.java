@@ -3,7 +3,7 @@ package dev.intermediatebox.string;
 // Tag: Trie
 // Tag: HashTable
 
-import dev.intermediatebox.string.utils.TrieCharNode;
+import dev.intermediatebox.tree.utils.TrieCharNode;
 
 // insert:
 // O(n) time complexity, where n is the size of the word

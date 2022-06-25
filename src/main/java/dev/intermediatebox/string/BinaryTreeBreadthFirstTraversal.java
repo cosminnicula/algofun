@@ -2,7 +2,7 @@ package dev.intermediatebox.string;
 // Tag: Tree
 // Tag: Queue
 
-import dev.intermediatebox.string.utils.Node;
+import dev.intermediatebox.tree.utils.Node;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

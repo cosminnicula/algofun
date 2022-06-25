@@ -2,7 +2,7 @@ package dev.intermediatebox.string;
 // Tag: String
 // Tag: Trie
 
-import dev.intermediatebox.string.utils.TrieCharNode2;
+import dev.intermediatebox.tree.utils.TrieCharNode2;
 
 // Design a data structure that supports adding new words and finding if a string matches any previously added string.
 

@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal;
 // Tag: BinaryTree
 // Tag: Recursion
 
-import dev.intermediatebox.string.utils.Node;
+import dev.intermediatebox.tree.utils.Node;
 
 import java.util.ArrayList;
 import java.util.List;

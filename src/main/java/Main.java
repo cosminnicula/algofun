@@ -1,6 +1,9 @@
-import dev.intermediatebox.string.utils.Node;
-import dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal.BinaryTreeLevelOrderTraversalIterative;
-import dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal.BinaryTreeLevelOrderTraversalRecursive;
+import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeSort;
+import dev.intermediatebox.tree.utils.traversal.DFS;
+
+import java.util.ArrayList;
+import java.util.List;
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
@@ -137,20 +140,37 @@ public class Main {
 //    DecodeString d = new DecodeString();
 //    System.out.println(d.decodeString("3[a2[c]]"));
 
+//    Node root = new Node(3);
+//    root.left = new Node(9);
+//    root.right = new Node(20);
+//    root.left.left = new Node(11);
+//    root.left.right = new Node(14);
+//    root.right.left = new Node(15);
+//    root.right.right = new Node(19);
+//
+//    BinaryTreeLevelOrderTraversalRecursive br = new BinaryTreeLevelOrderTraversalRecursive();
+//    var traversalR = br.levelOrder(root);
+//    System.out.println(traversalR);
+//
+//    BinaryTreeLevelOrderTraversalIterative bi = new BinaryTreeLevelOrderTraversalIterative();
+//    var traversalI = bi.levelOrder(root);
+//    System.out.println(traversalI);
+
+    RecoverBinarySearchTreeSort r = new RecoverBinarySearchTreeSort();
+
     Node root = new Node(3);
-    root.left = new Node(9);
-    root.right = new Node(20);
-    root.left.left = new Node(11);
-    root.left.right = new Node(14);
-    root.right.left = new Node(15);
-    root.right.right = new Node(19);
+    root.left = new Node(1);
+    root.right = new Node(4);
+    root.right.left = new Node(2);
 
-    BinaryTreeLevelOrderTraversalRecursive br = new BinaryTreeLevelOrderTraversalRecursive();
-    var traversalR = br.levelOrder(root);
-    System.out.println(traversalR);
+    List<Integer> traversal = new ArrayList<>();
+    DFS.inorder(root, traversal);
+    System.out.println(traversal);
 
-    BinaryTreeLevelOrderTraversalIterative bi = new BinaryTreeLevelOrderTraversalIterative();
-    var traversalI = bi.levelOrder(root);
-    System.out.println(traversalI);
+    r.recoverTree(root);
+
+    traversal = new ArrayList<>();
+    DFS.inorder(root, traversal);
+    System.out.println(traversal);
   }
 }

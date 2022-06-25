@@ -1,4 +1,4 @@
-package dev.intermediatebox.string.utils;
+package dev.intermediatebox.tree.utils;
 
 import java.util.HashMap;
 import java.util.Map;

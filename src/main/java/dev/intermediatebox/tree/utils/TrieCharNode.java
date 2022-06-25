@@ -1,4 +1,4 @@
-package dev.intermediatebox.string.utils;
+package dev.intermediatebox.tree.utils;
 
 // Array of TrieCharNode
 public class TrieCharNode {
