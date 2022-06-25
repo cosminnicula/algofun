@@ -1,4 +1,7 @@
 package dev.intermediatebox.tree.RecoverBinarySearchTree;
+// Tag: Tree
+// Tag: BinaryTree
+// Tag: Recursion
 
 import dev.intermediatebox.tree.utils.Node;
 import dev.intermediatebox.tree.utils.traversal.DFS;
@@ -36,14 +39,13 @@ public class RecoverBinarySearchTreeSort {
       return;
     }
 
+    if (swapCounter == 0) {
+      return;
+    }
+
     if (node.value == val1 || node.value == val2) {
       node.value = node.value == val1 ? val2 : val1;
-
       swapCounter--;
-
-      if (swapCounter == 0) {
-        return;
-      }
     }
 
     recover(node.left, swapCounter, val1, val2);
