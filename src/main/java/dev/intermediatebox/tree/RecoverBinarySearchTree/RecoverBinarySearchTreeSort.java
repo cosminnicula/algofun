@@ -12,22 +12,25 @@ import java.util.List;
 // O(n) time complexity
 // O(n) space complexity (the size of the traversal array)
 public class RecoverBinarySearchTreeSort {
+  public void recoverTree(Node root) {
+    List<Integer> traversal = new ArrayList<>();
+
+    DFS.inorder(root, traversal);
+
+    List<Integer> swappedValues = getSwappedValues(traversal);
+
+    recover(root, 2, swappedValues.get(0), swappedValues.get(1));
+  }
 
   private List<Integer> getSwappedValues(List<Integer> traversal) {
     List<Integer> swappedValues = new ArrayList<>();
     swappedValues.add(-1);
     swappedValues.add(-1);
-    boolean wasSwapped = false;
-
     for (int i = 0; i < traversal.size() - 1; i++) {
       if (traversal.get(i) > traversal.get(i + 1)) {
-        if (!wasSwapped) {
-          swappedValues.set(0, traversal.get(i));
-          swappedValues.set(1, traversal.get(i + 1));
-          wasSwapped = true;
-        } else {
-          break;
-        }
+        swappedValues.set(0, traversal.get(i));
+        swappedValues.set(1, traversal.get(i + 1));
+        return swappedValues;
       }
     }
 
@@ -50,15 +53,5 @@ public class RecoverBinarySearchTreeSort {
 
     recover(node.left, swapCounter, val1, val2);
     recover(node.right, swapCounter, val1, val2);
-  }
-
-  public void recoverTree(Node root) {
-    List<Integer> traversal = new ArrayList<>();
-
-    DFS.inorder(root, traversal);
-
-    List<Integer> swappedValues = getSwappedValues(traversal);
-
-    recover(root, 2, swappedValues.get(0), swappedValues.get(1));
   }
 }

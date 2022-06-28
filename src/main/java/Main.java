@@ -1,3 +1,4 @@
+import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderIterative;
 import dev.intermediatebox.tree.utils.Node;
 import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeSort;
 import dev.intermediatebox.tree.utils.traversal.DFS;
@@ -156,7 +157,8 @@ public class Main {
 //    var traversalI = bi.levelOrder(root);
 //    System.out.println(traversalI);
 
-    RecoverBinarySearchTreeSort r = new RecoverBinarySearchTreeSort();
+    // a. recover binary search tree: sort almost sorted
+    RecoverBinarySearchTreeSort rs = new RecoverBinarySearchTreeSort();
 
     Node root = new Node(3);
     root.left = new Node(1);
@@ -167,7 +169,25 @@ public class Main {
     DFS.inorder(root, traversal);
     System.out.println(traversal);
 
-    r.recoverTree(root);
+    rs.recoverTree(root);
+
+    traversal = new ArrayList<>();
+    DFS.inorder(root, traversal);
+    System.out.println(traversal);
+
+    // b. recover binary search tree: inorder traversal iterative
+    RecoverBinarySearchTreeInorderIterative ri = new RecoverBinarySearchTreeInorderIterative();
+
+    root = new Node(3);
+    root.left = new Node(1);
+    root.right = new Node(4);
+    root.right.left = new Node(2);
+
+    traversal = new ArrayList<>();
+    DFS.inorder(root, traversal);
+    System.out.println(traversal);
+
+    ri.recoverTree(root);
 
     traversal = new ArrayList<>();
     DFS.inorder(root, traversal);
