@@ -1,4 +1,7 @@
 package dev.intermediatebox.tree.RecoverBinarySearchTree;
+// Tag: Tree
+// Tag: BinaryTree
+// Tag: Iterative
 
 import dev.intermediatebox.tree.utils.Node;
 
@@ -29,9 +32,9 @@ public class RecoverBinarySearchTreeInorderIterative {
     }
   }
 
-  private void swap(Node a, Node b) {
-    int temp = a.value;
-    a.value = b.value;
-    b.value = temp;
+  private void swap(Node node1, Node node2) {
+    int temp = node1.value;
+    node1.value = node2.value;
+    node2.value = temp;
   }
 }
