@@ -1,11 +1,6 @@
-import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderIterative;
-import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderRecursive;
+import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalIterative;
+import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalRecursive;
 import dev.intermediatebox.tree.utils.Node;
-import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeSort;
-import dev.intermediatebox.tree.utils.traversal.DFS;
-
-import java.util.ArrayList;
-import java.util.List;
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
@@ -158,58 +153,73 @@ public class Main {
 //    var traversalI = bi.levelOrder(root);
 //    System.out.println(traversalI);
 
-    // a. recover binary search tree: sort almost sorted
-    RecoverBinarySearchTreeSort rs = new RecoverBinarySearchTreeSort();
+//    // a. recover binary search tree: sort almost sorted
+//    RecoverBinarySearchTreeSort rs = new RecoverBinarySearchTreeSort();
+//
+//    Node root = new Node(3);
+//    root.left = new Node(1);
+//    root.right = new Node(4);
+//    root.right.left = new Node(2);
+//
+//    List<Integer> traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    rs.recoverTree(root);
+//
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    // b. recover binary search tree: inorder traversal iterative
+//    RecoverBinarySearchTreeInorderIterative ri = new RecoverBinarySearchTreeInorderIterative();
+//
+//    root = new Node(3);
+//    root.left = new Node(1);
+//    root.right = new Node(4);
+//    root.right.left = new Node(2);
+//
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    ri.recoverTree(root);
+//
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    // c. recover binary search tree: inorder traversal recursive
+//    RecoverBinarySearchTreeInorderRecursive rr = new RecoverBinarySearchTreeInorderRecursive();
+//
+//    root = new Node(3);
+//    root.left = new Node(1);
+//    root.right = new Node(4);
+//    root.right.left = new Node(2);
+//
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    rr.recoverTree(root);
+//
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
 
-    Node root = new Node(3);
-    root.left = new Node(1);
-    root.right = new Node(4);
-    root.right.left = new Node(2);
+    // validate binary search tree: preorder recursive
+    ValidateBinarySearchTreeWithIntervalRecursive ip = new ValidateBinarySearchTreeWithIntervalRecursive();
+    Node root = new Node(10);
+    root.left = new Node(5);
+    root.right = new Node(15);
+    root.left.left = new Node(3);
+    root.left.right = new Node(7);
+    root.right.right = new Node(13);
 
-    List<Integer> traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
+    System.out.println(ip.isValidBST(root));
 
-    rs.recoverTree(root);
+    ValidateBinarySearchTreeWithIntervalIterative ii = new ValidateBinarySearchTreeWithIntervalIterative();
 
-    traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
-
-    // b. recover binary search tree: inorder traversal iterative
-    RecoverBinarySearchTreeInorderIterative ri = new RecoverBinarySearchTreeInorderIterative();
-
-    root = new Node(3);
-    root.left = new Node(1);
-    root.right = new Node(4);
-    root.right.left = new Node(2);
-
-    traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
-
-    ri.recoverTree(root);
-
-    traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
-
-    // c. recover binary search tree: inorder traversal recursive
-    RecoverBinarySearchTreeInorderRecursive rr = new RecoverBinarySearchTreeInorderRecursive();
-
-    root = new Node(3);
-    root.left = new Node(1);
-    root.right = new Node(4);
-    root.right.left = new Node(2);
-
-    traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
-
-    rr.recoverTree(root);
-
-    traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
+    System.out.println(ii.isValidBST(root));
   }
 }
