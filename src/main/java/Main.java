@@ -1,3 +1,5 @@
+import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentIterative;
+import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentRecursive;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalIterative;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalRecursive;
 import dev.intermediatebox.tree.utils.Node;
@@ -207,8 +209,7 @@ public class Main {
 //    DFS.inorder(root, traversal);
 //    System.out.println(traversal);
 
-    // validate binary search tree: preorder recursive
-    ValidateBinarySearchTreeWithIntervalRecursive ip = new ValidateBinarySearchTreeWithIntervalRecursive();
+    ValidateBinarySearchTreeWithIntervalRecursive ir = new ValidateBinarySearchTreeWithIntervalRecursive();
     Node root = new Node(10);
     root.left = new Node(5);
     root.right = new Node(15);
@@ -216,10 +217,18 @@ public class Main {
     root.left.right = new Node(7);
     root.right.right = new Node(13);
 
-    System.out.println(ip.isValidBST(root));
+    System.out.println(ir.isValidBST(root));
 
     ValidateBinarySearchTreeWithIntervalIterative ii = new ValidateBinarySearchTreeWithIntervalIterative();
 
     System.out.println(ii.isValidBST(root));
+
+    ValidateBinarySearchTreeInorderPrecedentRecursive pr = new ValidateBinarySearchTreeInorderPrecedentRecursive();
+
+    System.out.println(pr.isValidBST(root));
+
+    ValidateBinarySearchTreeInorderPrecedentIterative pi = new ValidateBinarySearchTreeInorderPrecedentIterative();
+
+    System.out.println(pi.isValidBST(root));
   }
 }

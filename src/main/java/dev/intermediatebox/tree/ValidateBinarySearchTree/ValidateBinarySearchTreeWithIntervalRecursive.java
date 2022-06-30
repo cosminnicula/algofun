@@ -1,7 +1,7 @@
 package dev.intermediatebox.tree.ValidateBinarySearchTree;
 // Tag: Tree
 // Tag: BinaryTree
-// Tag: Recursion
+// Tag: Recursive
 
 import dev.intermediatebox.tree.utils.Node;
 

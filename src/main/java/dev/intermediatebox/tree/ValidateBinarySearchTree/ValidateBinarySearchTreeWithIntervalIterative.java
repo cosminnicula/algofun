@@ -1,10 +1,15 @@
 package dev.intermediatebox.tree.ValidateBinarySearchTree;
+// Tag: Tree
+// Tag: BinaryTree
+// Tag: Iterative
 
 import dev.intermediatebox.tree.utils.Node;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
+// O(n) time complexity
+// O(n) space complexity
 public class ValidateBinarySearchTreeWithIntervalIterative {
   private Deque<Node> stack = new LinkedList();
   private Deque<Integer> upperBounds = new LinkedList();
