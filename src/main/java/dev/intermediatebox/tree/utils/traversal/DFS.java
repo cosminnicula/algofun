@@ -32,8 +32,8 @@ public class DFS {
       return;
     }
 
-    preorder(root.left, traversal);
-    preorder(root.right, traversal);
+    postorder(root.left, traversal);
+    postorder(root.right, traversal);
     traversal.add(root.value);
   }
 }
