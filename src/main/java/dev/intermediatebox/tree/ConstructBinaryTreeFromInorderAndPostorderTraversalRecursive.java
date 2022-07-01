@@ -42,14 +42,14 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive {
     Node root = new Node(rootValue);
 
     // the root value splits inorder list into left and right subtrees
-    int index = inorderIndexes.get(rootValue);
+    int inorderIndex = inorderIndexes.get(rootValue);
 
     postorderIndex--;
     // right subtree
-    root.right = reconstructTree(index + 1, inorderRight);
+    root.right = reconstructTree(inorderIndex + 1, inorderRight);
 
     // left subtree
-    root.left = reconstructTree(inorderLeft, index - 1);
+    root.left = reconstructTree(inorderLeft, inorderIndex - 1);
 
     return root;
   }
