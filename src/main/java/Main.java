@@ -1,4 +1,5 @@
 import dev.intermediatebox.tree.ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive;
+import dev.intermediatebox.tree.ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentIterative;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentRecursive;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalIterative;
@@ -235,8 +236,29 @@ public class Main {
 //    ValidateBinarySearchTreeInorderPrecedentIterative pi = new ValidateBinarySearchTreeInorderPrecedentIterative();
 //
 //    System.out.println(pi.isValidBST(root));
+//
+//    ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive c = new ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive();
+//
+//    Node root = new Node(3);
+//    root.left = new Node(9);
+//    root.right = new Node(20);
+//    root.right.left = new Node(15);
+//    root.right.right = new Node(7);
+//
+//    List<Integer> traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    int[] inorder = traversal.stream().mapToInt(i -> i).toArray();
+//
+//    traversal = new ArrayList<>();
+//    DFS.postorder(root, traversal);
+//    int[] postorder = traversal.stream().mapToInt(i -> i).toArray();
+//
+//    root = c.buildTree(inorder, postorder);
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
 
-    ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive c = new ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive();
+    ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive c = new ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive();
 
     Node root = new Node(3);
     root.left = new Node(9);
@@ -249,10 +271,10 @@ public class Main {
     int[] inorder = traversal.stream().mapToInt(i -> i).toArray();
 
     traversal = new ArrayList<>();
-    DFS.postorder(root, traversal);
-    int[] postorder = traversal.stream().mapToInt(i -> i).toArray();
+    DFS.preorder(root, traversal);
+    int[] preorder = traversal.stream().mapToInt(i -> i).toArray();
 
-    root = c.buildTree(inorder, postorder);
+    root = c.buildTree(inorder, preorder);
     traversal = new ArrayList<>();
     DFS.inorder(root, traversal);
     System.out.println(traversal);
