@@ -1,3 +1,4 @@
+import dev.intermediatebox.string.RemoveKDigits;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentIterative;
@@ -258,25 +259,30 @@ public class Main {
 //    DFS.inorder(root, traversal);
 //    System.out.println(traversal);
 
-    ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive c = new ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive();
+//    ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive c = new ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive();
+//
+//    Node root = new Node(3);
+//    root.left = new Node(9);
+//    root.right = new Node(20);
+//    root.right.left = new Node(15);
+//    root.right.right = new Node(7);
+//
+//    List<Integer> traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    int[] inorder = traversal.stream().mapToInt(i -> i).toArray();
+//
+//    traversal = new ArrayList<>();
+//    DFS.preorder(root, traversal);
+//    int[] preorder = traversal.stream().mapToInt(i -> i).toArray();
+//
+//    root = c.buildTree(inorder, preorder);
+//    traversal = new ArrayList<>();
+//    DFS.inorder(root, traversal);
+//    System.out.println(traversal);
 
-    Node root = new Node(3);
-    root.left = new Node(9);
-    root.right = new Node(20);
-    root.right.left = new Node(15);
-    root.right.right = new Node(7);
-
-    List<Integer> traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    int[] inorder = traversal.stream().mapToInt(i -> i).toArray();
-
-    traversal = new ArrayList<>();
-    DFS.preorder(root, traversal);
-    int[] preorder = traversal.stream().mapToInt(i -> i).toArray();
-
-    root = c.buildTree(inorder, preorder);
-    traversal = new ArrayList<>();
-    DFS.inorder(root, traversal);
-    System.out.println(traversal);
+    RemoveKDigits r = new RemoveKDigits();
+    System.out.println(r.removeKdigits("12345264", 4));
+    System.out.println(r.removeKdigits("500123", 3));
+    System.out.println(r.removeKdigits("500123", 4));
   }
 }
