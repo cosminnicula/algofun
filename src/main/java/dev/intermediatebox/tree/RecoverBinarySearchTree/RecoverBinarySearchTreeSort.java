@@ -4,7 +4,7 @@ package dev.intermediatebox.tree.RecoverBinarySearchTree;
 // Tag: Recursion
 
 import dev.intermediatebox.tree.utils.Node;
-import dev.intermediatebox.tree.utils.traversal.DFS;
+import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class RecoverBinarySearchTreeSort {
   public void recoverTree(Node root) {
     List<Integer> traversal = new ArrayList<>();
 
-    DFS.inorder(root, traversal);
+    DFSRecursive.inorder(root, traversal);
 
     List<Integer> swappedValues = getSwappedValues(traversal);
 

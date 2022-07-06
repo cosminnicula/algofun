@@ -1,12 +1,17 @@
 import dev.intermediatebox.string.RemoveKDigits;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive;
+import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderIterative;
+import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderRecursive;
+import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeSort;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentIterative;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentRecursive;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalIterative;
 import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalRecursive;
 import dev.intermediatebox.tree.utils.Node;
-import dev.intermediatebox.tree.utils.traversal.DFS;
+import dev.intermediatebox.tree.utils.traversal.BFSIterative;
+import dev.intermediatebox.tree.utils.traversal.DFSIterative;
+import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,18 +41,6 @@ public class Main {
 
 //    LetterCombinationsOfAPhoneNumber l = new LetterCombinationsOfAPhoneNumber();
 //    System.out.println(l.run("23"));
-
-////    BinaryTreeDepthFirstTraversal btdft = new BinaryTreeDepthFirstTraversal();
-//    BinaryTreeBreadthFirstTraversal btbft = new BinaryTreeBreadthFirstTraversal();
-//    Node head = new Node(1);
-//    head.left = new Node(2);
-//    head.left.left = new Node(3);
-//    head.left.right = new Node(4);
-//    head.right = new Node(5);
-//    head.right.left = new Node(6);
-//
-////    System.out.println(btdft.run(head));
-//    System.out.println(btbft.run(head));
 
 //    GenerateParentheses gp = new GenerateParentheses();
 //    System.out.println(gp.run(3));
@@ -171,13 +164,13 @@ public class Main {
 //    root.right.left = new Node(2);
 //
 //    List<Integer> traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
 //
 //    rs.recoverTree(root);
 //
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
 //
 //    // b. recover binary search tree: inorder traversal iterative
@@ -189,13 +182,13 @@ public class Main {
 //    root.right.left = new Node(2);
 //
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
 //
 //    ri.recoverTree(root);
 //
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
 //
 //    // c. recover binary search tree: inorder traversal recursive
@@ -207,15 +200,15 @@ public class Main {
 //    root.right.left = new Node(2);
 //
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
 //
 //    rr.recoverTree(root);
 //
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
-
+//
 //    ValidateBinarySearchTreeWithIntervalRecursive ir = new ValidateBinarySearchTreeWithIntervalRecursive();
 //    Node root = new Node(10);
 //    root.left = new Node(5);
@@ -247,18 +240,18 @@ public class Main {
 //    root.right.right = new Node(7);
 //
 //    List<Integer> traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    int[] inorder = traversal.stream().mapToInt(i -> i).toArray();
 //
 //    traversal = new ArrayList<>();
-//    DFS.postorder(root, traversal);
+//    DFSRecursive.postorder(root, traversal);
 //    int[] postorder = traversal.stream().mapToInt(i -> i).toArray();
 //
 //    root = c.buildTree(inorder, postorder);
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
-
+//
 //    ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive c = new ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive();
 //
 //    Node root = new Node(3);
@@ -268,21 +261,79 @@ public class Main {
 //    root.right.right = new Node(7);
 //
 //    List<Integer> traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    int[] inorder = traversal.stream().mapToInt(i -> i).toArray();
 //
 //    traversal = new ArrayList<>();
-//    DFS.preorder(root, traversal);
+//    DFSRecursive.preorder(root, traversal);
 //    int[] preorder = traversal.stream().mapToInt(i -> i).toArray();
 //
 //    root = c.buildTree(inorder, preorder);
 //    traversal = new ArrayList<>();
-//    DFS.inorder(root, traversal);
+//    DFSRecursive.inorder(root, traversal);
 //    System.out.println(traversal);
+//
+//    RemoveKDigits r = new RemoveKDigits();
+//    System.out.println(r.removeKdigits("12345264", 4));
+//    System.out.println(r.removeKdigits("500123", 3));
+//    System.out.println(r.removeKdigits("500123", 4));
 
-    RemoveKDigits r = new RemoveKDigits();
-    System.out.println(r.removeKdigits("12345264", 4));
-    System.out.println(r.removeKdigits("500123", 3));
-    System.out.println(r.removeKdigits("500123", 4));
+    // DSF traversal
+    // Inorder
+    Node root = new Node(4);
+    root.left = new Node(2);
+    root.right = new Node(5);
+    root.left.left = new Node(1);
+    root.left.right = new Node(3);
+
+    List<Integer> traversal = new ArrayList<>();
+    DFSRecursive.inorder(root, traversal);
+    System.out.println(traversal);
+
+    traversal = new ArrayList<>();
+    DFSIterative.inorder(root, traversal);
+    System.out.println(traversal);
+
+    // Preorder
+    root = new Node(1);
+    root.left = new Node(2);
+    root.right = new Node(5);
+    root.left.left = new Node(3);
+    root.left.right = new Node(4);
+
+    traversal = new ArrayList<>();
+    DFSRecursive.preorder(root, traversal);
+    System.out.println(traversal);
+
+    traversal = new ArrayList<>();
+    DFSIterative.preorder(root, traversal);
+    System.out.println(traversal);
+
+    // Postorder
+    root = new Node(5);
+    root.left = new Node(3);
+    root.right = new Node(4);
+    root.left.left = new Node(1);
+    root.left.right = new Node(2);
+
+    traversal = new ArrayList<>();
+    DFSRecursive.postorder(root, traversal);
+    System.out.println(traversal);
+
+    traversal = new ArrayList<>();
+    DFSIterative.postorder(root, traversal);
+    System.out.println(traversal);
+
+    // BFS traversal
+    // Iterative
+    root = new Node(1);
+    root.left = new Node(2);
+    root.right = new Node(3);
+    root.left.left = new Node(4);
+    root.left.right = new Node(5);
+
+    traversal = new ArrayList<>();
+    BFSIterative.traverse(root, traversal);
+    System.out.println(traversal);
   }
 }

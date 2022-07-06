@@ -4,9 +4,10 @@ import dev.intermediatebox.tree.utils.Node;
 
 import java.util.List;
 
-public class DFS {
+public class DFSRecursive {
 
   // OBS: inorder traversal of BST is an array sorted in the ascending order
+  // left -> node -> right
   public static void inorder(Node root, List<Integer> traversal) {
     if (root == null) {
       return;
@@ -17,6 +18,7 @@ public class DFS {
     inorder(root.right, traversal);
   }
 
+  // node -> left -> right
   public static void preorder(Node root, List<Integer> traversal) {
     if (root == null) {
       return;
@@ -27,6 +29,7 @@ public class DFS {
     preorder(root.right, traversal);
   }
 
+  // left -> right -> node
   public static void postorder(Node root, List<Integer> traversal) {
     if (root == null) {
       return;
