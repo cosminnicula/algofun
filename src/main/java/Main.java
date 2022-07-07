@@ -1,4 +1,6 @@
 import dev.intermediatebox.string.RemoveKDigits;
+import dev.intermediatebox.tree.BinaryTreeRightSideView.BinaryTreeRightSideViewBFS;
+import dev.intermediatebox.tree.BinaryTreeRightSideView.BinaryTreeRightSideViewRecursiveDFS;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive;
 import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderIterative;
@@ -278,62 +280,76 @@ public class Main {
 //    System.out.println(r.removeKdigits("500123", 3));
 //    System.out.println(r.removeKdigits("500123", 4));
 
-    // DSF traversal
-    // Inorder
-    Node root = new Node(4);
-    root.left = new Node(2);
-    root.right = new Node(5);
-    root.left.left = new Node(1);
-    root.left.right = new Node(3);
+//    // DSF traversal
+//    // Inorder
+//    Node root = new Node(4);
+//    root.left = new Node(2);
+//    root.right = new Node(5);
+//    root.left.left = new Node(1);
+//    root.left.right = new Node(3);
+//
+//    List<Integer> traversal = new ArrayList<>();
+//    DFSRecursive.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    traversal = new ArrayList<>();
+//    DFSIterative.inorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    // Preorder
+//    root = new Node(1);
+//    root.left = new Node(2);
+//    root.right = new Node(5);
+//    root.left.left = new Node(3);
+//    root.left.right = new Node(4);
+//
+//    traversal = new ArrayList<>();
+//    DFSRecursive.preorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    traversal = new ArrayList<>();
+//    DFSIterative.preorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    // Postorder
+//    root = new Node(5);
+//    root.left = new Node(3);
+//    root.right = new Node(4);
+//    root.left.left = new Node(1);
+//    root.left.right = new Node(2);
+//
+//    traversal = new ArrayList<>();
+//    DFSRecursive.postorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    traversal = new ArrayList<>();
+//    DFSIterative.postorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    // BFS traversal
+//    // Iterative
+//    root = new Node(1);
+//    root.left = new Node(2);
+//    root.right = new Node(3);
+//    root.left.left = new Node(4);
+//    root.left.right = new Node(5);
+//
+//    traversal = new ArrayList<>();
+//    BFSIterative.traverse(root, traversal);
+//    System.out.println(traversal);
 
-    List<Integer> traversal = new ArrayList<>();
-    DFSRecursive.inorder(root, traversal);
-    System.out.println(traversal);
+    BinaryTreeRightSideViewBFS rb = new BinaryTreeRightSideViewBFS();
 
-    traversal = new ArrayList<>();
-    DFSIterative.inorder(root, traversal);
-    System.out.println(traversal);
-
-    // Preorder
-    root = new Node(1);
-    root.left = new Node(2);
-    root.right = new Node(5);
-    root.left.left = new Node(3);
-    root.left.right = new Node(4);
-
-    traversal = new ArrayList<>();
-    DFSRecursive.preorder(root, traversal);
-    System.out.println(traversal);
-
-    traversal = new ArrayList<>();
-    DFSIterative.preorder(root, traversal);
-    System.out.println(traversal);
-
-    // Postorder
-    root = new Node(5);
-    root.left = new Node(3);
-    root.right = new Node(4);
-    root.left.left = new Node(1);
-    root.left.right = new Node(2);
-
-    traversal = new ArrayList<>();
-    DFSRecursive.postorder(root, traversal);
-    System.out.println(traversal);
-
-    traversal = new ArrayList<>();
-    DFSIterative.postorder(root, traversal);
-    System.out.println(traversal);
-
-    // BFS traversal
-    // Iterative
-    root = new Node(1);
+    Node root = new Node(1);
     root.left = new Node(2);
     root.right = new Node(3);
-    root.left.left = new Node(4);
     root.left.right = new Node(5);
+    root.right.right = new Node(4);
 
-    traversal = new ArrayList<>();
-    BFSIterative.traverse(root, traversal);
-    System.out.println(traversal);
+    System.out.println(rb.rightSideView(root));
+
+    BinaryTreeRightSideViewRecursiveDFS rd = new BinaryTreeRightSideViewRecursiveDFS();
+
+    System.out.println(rd.rightSideView(root));
   }
 }

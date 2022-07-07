@@ -29,6 +29,17 @@ public class DFSRecursive {
     preorder(root.right, traversal);
   }
 
+  // node -> right -> left
+  public static void reversePreorder(Node root, List<Integer> traversal) {
+    if (root == null) {
+      return;
+    }
+
+    traversal.add(root.value);
+    preorder(root.right, traversal);
+    preorder(root.left, traversal);
+  }
+
   // left -> right -> node
   public static void postorder(Node root, List<Integer> traversal) {
     if (root == null) {
