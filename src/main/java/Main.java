@@ -1,6 +1,7 @@
 import dev.intermediatebox.string.RemoveKDigits;
 import dev.intermediatebox.tree.BinaryTreeRightSideView.BinaryTreeRightSideViewBFS;
 import dev.intermediatebox.tree.BinaryTreeRightSideView.BinaryTreeRightSideViewRecursiveDFS;
+import dev.intermediatebox.tree.BinaryTreeZigZagLevelOrderTraversal;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive;
 import dev.intermediatebox.tree.ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive;
 import dev.intermediatebox.tree.DeepestLeavesSum.DeepestLeavesSumBFS;
@@ -354,21 +355,31 @@ public class Main {
 //
 //    System.out.println(rd.rightSideView(root));
 
-    DeepestLeavesSumBFS db = new DeepestLeavesSumBFS();
+//    DeepestLeavesSumBFS db = new DeepestLeavesSumBFS();
+//
+//    Node root = new Node(1);
+//    root.left = new Node(2);
+//    root.right = new Node(3);
+//    root.left.left = new Node(4);
+//    root.left.right = new Node(5);
+//    root.right.right = new Node(6);
+//    root.left.left.left = new Node(7);
+//    root.right.right.right = new Node(8);
+//
+//    System.out.println(db.deepestLeavesSum(root));
+//
+//    DeepestLeavesSumDFS dd = new DeepestLeavesSumDFS();
+//
+//    System.out.println(dd.deepestLeavesSum(root));
 
-    Node root = new Node(1);
-    root.left = new Node(2);
-    root.right = new Node(3);
-    root.left.left = new Node(4);
-    root.left.right = new Node(5);
-    root.right.right = new Node(6);
-    root.left.left.left = new Node(7);
-    root.right.right.right = new Node(8);
+    BinaryTreeZigZagLevelOrderTraversal bz = new BinaryTreeZigZagLevelOrderTraversal();
 
-    System.out.println(db.deepestLeavesSum(root));
+    Node root = new Node(3);
+    root.left = new Node(9);
+    root.right = new Node(20);
+    root.right.left = new Node(15);
+    root.right.right = new Node(7);
 
-    DeepestLeavesSumDFS dd = new DeepestLeavesSumDFS();
-
-    System.out.println(dd.deepestLeavesSum(root));
+    System.out.println(bz.zigzagLevelOrder(root));
   }
 }
