@@ -3,17 +3,17 @@ package dev.intermediatebox.tree.RecoverBinarySearchTree;
 // Tag: BinaryTree
 // Tag: Recursion
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 public class RecoverBinarySearchTreeInorderRecursive {
-  Node swapped1, swapped2, pred;
+  TreeNode swapped1, swapped2, pred;
 
-  public void recoverTree(Node root) {
+  public void recoverTree(TreeNode root) {
     findSwapped(root);
     swap(swapped1, swapped2);
   }
 
-  private void findSwapped(Node node) {
+  private void findSwapped(TreeNode node) {
     if (node == null) {
       return;
     }
@@ -29,7 +29,7 @@ public class RecoverBinarySearchTreeInorderRecursive {
     findSwapped(node.right);
   }
 
-  private void swap(Node node1, Node node2) {
+  private void swap(TreeNode node1, TreeNode node2) {
     int temp = node1.value;
     node1.value = node2.value;
     node2.value = temp;

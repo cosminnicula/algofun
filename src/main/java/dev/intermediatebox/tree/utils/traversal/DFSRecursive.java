@@ -1,6 +1,6 @@
 package dev.intermediatebox.tree.utils.traversal;
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ public class DFSRecursive {
 
   // OBS: inorder traversal of BST is an array sorted in the ascending order
   // left -> node -> right
-  public static void inorder(Node root, List<Integer> traversal) {
+  public static void inorder(TreeNode root, List<Integer> traversal) {
     if (root == null) {
       return;
     }
@@ -19,7 +19,7 @@ public class DFSRecursive {
   }
 
   // node -> left -> right
-  public static void preorder(Node root, List<Integer> traversal) {
+  public static void preorder(TreeNode root, List<Integer> traversal) {
     if (root == null) {
       return;
     }
@@ -30,7 +30,7 @@ public class DFSRecursive {
   }
 
   // node -> right -> left
-  public static void reversePreorder(Node root, List<Integer> traversal) {
+  public static void reversePreorder(TreeNode root, List<Integer> traversal) {
     if (root == null) {
       return;
     }
@@ -41,7 +41,7 @@ public class DFSRecursive {
   }
 
   // left -> right -> node
-  public static void postorder(Node root, List<Integer> traversal) {
+  public static void postorder(TreeNode root, List<Integer> traversal) {
     if (root == null) {
       return;
     }

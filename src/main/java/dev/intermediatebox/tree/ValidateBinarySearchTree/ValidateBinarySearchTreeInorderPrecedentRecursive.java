@@ -3,18 +3,18 @@ package dev.intermediatebox.tree.ValidateBinarySearchTree;
 // Tag: BinaryTree
 // Tag: Recursive
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 // O(n) time complexity
 // O(n) space complexity
 public class ValidateBinarySearchTreeInorderPrecedentRecursive {
-  Node precedent = null;
+  TreeNode precedent = null;
 
-  public boolean isValidBST(Node root) {
+  public boolean isValidBST(TreeNode root) {
     return isValid(root);
   }
 
-  private boolean isValid(Node node) {
+  private boolean isValid(TreeNode node) {
     if (node == null) {
       return true;
     }

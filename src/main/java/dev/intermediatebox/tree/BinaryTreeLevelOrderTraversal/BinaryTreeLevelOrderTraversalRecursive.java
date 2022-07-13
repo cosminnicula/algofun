@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal;
 // Tag: BinaryTree
 // Tag: Recursion
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public class BinaryTreeLevelOrderTraversalRecursive {
   List<List<Integer>> levels = new ArrayList<List<Integer>>();
 
-  public List<List<Integer>> levelOrder(Node root) {
+  public List<List<Integer>> levelOrder(TreeNode root) {
     if (root == null) {
       return levels;
     }
@@ -23,7 +23,7 @@ public class BinaryTreeLevelOrderTraversalRecursive {
     return levels;
   }
 
-  private void backtrack(Node node, int level) {
+  private void backtrack(TreeNode node, int level) {
     if (levels.size() == level) {
       levels.add(new ArrayList<>());
     }

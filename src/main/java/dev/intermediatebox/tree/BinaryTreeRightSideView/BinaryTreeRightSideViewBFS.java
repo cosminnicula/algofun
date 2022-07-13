@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.BinaryTreeRightSideView;
 // Tag: BinaryTree
 // Tag: Iterative
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.*;
 
@@ -11,13 +11,13 @@ import java.util.*;
 // O(n) time complexity (the nodes are visited only once)
 // O(n) space complexity (for complete binary tree, where the number of leaves is n/2)
 public class BinaryTreeRightSideViewBFS {
-  public List<Integer> rightSideView(Node root) {
+  public List<Integer> rightSideView(TreeNode root) {
     if (root == null) {
       return new ArrayList<>();
     }
 
-    Queue<Node> currentLevel = new LinkedList<>();
-    Queue<Node> nextLevel = new LinkedList<>();
+    Queue<TreeNode> currentLevel = new LinkedList<>();
+    Queue<TreeNode> nextLevel = new LinkedList<>();
     List<Integer> rightSide = new ArrayList();
 
     nextLevel.add(root);
@@ -25,7 +25,7 @@ public class BinaryTreeRightSideViewBFS {
       currentLevel = cloneQueue(nextLevel);
       nextLevel.clear();
 
-      Node node = null;
+      TreeNode node = null;
 
       // BFS backbone
       while (!currentLevel.isEmpty()) {
@@ -47,9 +47,9 @@ public class BinaryTreeRightSideViewBFS {
     return rightSide;
   }
 
-  private Queue<Node> cloneQueue(Queue<Node> source) {
-    Queue<Node> destination = new LinkedList<>();
-    for (Node node : source) {
+  private Queue<TreeNode> cloneQueue(Queue<TreeNode> source) {
+    Queue<TreeNode> destination = new LinkedList<>();
+    for (TreeNode node : source) {
       destination.add(node);
     }
     return destination;

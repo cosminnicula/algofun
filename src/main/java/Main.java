@@ -1,24 +1,9 @@
-import dev.intermediatebox.string.RemoveKDigits;
-import dev.intermediatebox.tree.BinaryTreeRightSideView.BinaryTreeRightSideViewBFS;
-import dev.intermediatebox.tree.BinaryTreeRightSideView.BinaryTreeRightSideViewRecursiveDFS;
 import dev.intermediatebox.tree.BinaryTreeZigZagLevelOrderTraversal;
-import dev.intermediatebox.tree.ConstructBinaryTreeFromInorderAndPostorderTraversalRecursive;
-import dev.intermediatebox.tree.ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive;
-import dev.intermediatebox.tree.DeepestLeavesSum.DeepestLeavesSumBFS;
-import dev.intermediatebox.tree.DeepestLeavesSum.DeepestLeavesSumDFS;
-import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderIterative;
-import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeInorderRecursive;
-import dev.intermediatebox.tree.RecoverBinarySearchTree.RecoverBinarySearchTreeSort;
-import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentIterative;
-import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeInorderPrecedentRecursive;
-import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalIterative;
-import dev.intermediatebox.tree.ValidateBinarySearchTree.ValidateBinarySearchTreeWithIntervalRecursive;
-import dev.intermediatebox.tree.utils.Node;
-import dev.intermediatebox.tree.utils.traversal.BFSIterative;
-import dev.intermediatebox.tree.utils.traversal.DFSIterative;
+import dev.intermediatebox.tree.ConvertSortedArrayToBinarySearchTree;
+import dev.intermediatebox.tree.utils.TreeNode;
 import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
@@ -372,14 +357,26 @@ public class Main {
 //
 //    System.out.println(dd.deepestLeavesSum(root));
 
-    BinaryTreeZigZagLevelOrderTraversal bz = new BinaryTreeZigZagLevelOrderTraversal();
+//    BinaryTreeZigZagLevelOrderTraversal bz = new BinaryTreeZigZagLevelOrderTraversal();
+//
+//    TreeNode root = new TreeNode(3);
+//    root.left = new TreeNode(9);
+//    root.right = new TreeNode(20);
+//    root.right.left = new TreeNode(15);
+//    root.right.right = new TreeNode(7);
+//
+//    System.out.println(bz.zigzagLevelOrder(root));
 
-    Node root = new Node(3);
-    root.left = new Node(9);
-    root.right = new Node(20);
-    root.right.left = new Node(15);
-    root.right.right = new Node(7);
+    ConvertSortedArrayToBinarySearchTree ca = new ConvertSortedArrayToBinarySearchTree();
 
-    System.out.println(bz.zigzagLevelOrder(root));
+    int[] array = new int[] { -10, -3, 0, 5, 9 };
+
+    TreeNode root = ca.sortedArrayToBST(array);
+
+    List<Integer> traversal = new LinkedList<>();
+
+    DFSRecursive.inorder(root, traversal);
+
+    System.out.println(traversal);
   }
 }

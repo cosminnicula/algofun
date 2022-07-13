@@ -1,15 +1,15 @@
 package dev.intermediatebox.tree.utils;
 
-public class Node {
+public class TreeNode {
   public int value;
-  public Node left;
-  public Node right;
+  public TreeNode left;
+  public TreeNode right;
 
-  public Node(int value) {
+  public TreeNode(int value) {
     this.value = value;
   }
 
-  public Node(int value, Node left, Node right) {
+  public TreeNode(int value, TreeNode left, TreeNode right) {
     this.value = value;
     this.left = left;
     this.right = right;

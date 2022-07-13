@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.ValidateBinarySearchTree;
 // Tag: BinaryTree
 // Tag: Iterative
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -11,11 +11,11 @@ import java.util.LinkedList;
 // O(n) time complexity
 // O(n) space complexity
 public class ValidateBinarySearchTreeWithIntervalIterative {
-  private Deque<Node> stack = new LinkedList();
+  private Deque<TreeNode> stack = new LinkedList();
   private Deque<Integer> upperBounds = new LinkedList();
   private Deque<Integer> lowerBounds = new LinkedList();
 
-  public boolean isValidBST(Node node) {
+  public boolean isValidBST(TreeNode node) {
     Integer lowerBound = null, upperBound = null, val;
 
     pushToStacks(node, lowerBound, upperBound);
@@ -47,7 +47,7 @@ public class ValidateBinarySearchTreeWithIntervalIterative {
     return true;
   }
 
-  public void pushToStacks(Node root, Integer low, Integer high) {
+  public void pushToStacks(TreeNode root, Integer low, Integer high) {
     stack.add(root);
     lowerBounds.add(low);
     upperBounds.add(high);

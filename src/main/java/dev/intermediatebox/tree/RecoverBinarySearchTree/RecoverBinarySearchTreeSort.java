@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.RecoverBinarySearchTree;
 // Tag: BinaryTree
 // Tag: Recursion
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.List;
 // O(n) time complexity
 // O(n) space complexity (the size of the traversal array)
 public class RecoverBinarySearchTreeSort {
-  public void recoverTree(Node root) {
+  public void recoverTree(TreeNode root) {
     List<Integer> traversal = new ArrayList<>();
 
     DFSRecursive.inorder(root, traversal);
@@ -37,7 +37,7 @@ public class RecoverBinarySearchTreeSort {
     return swappedValues;
   }
 
-  private void recover(Node node, Integer swapCounter, Integer val1, Integer val2) {
+  private void recover(TreeNode node, Integer swapCounter, Integer val1, Integer val2) {
     if (node == null) {
       return;
     }

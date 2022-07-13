@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.BinaryTreeRightSideView;
 // Tag: BinaryTree
 // Tag: Recursive
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
 public class BinaryTreeRightSideViewRecursiveDFS {
   List<Integer> rightSide = new ArrayList();
 
-  public List<Integer> rightSideView(Node root) {
+  public List<Integer> rightSideView(TreeNode root) {
     if (root == null) {
       return rightSide;
     }
@@ -24,7 +24,7 @@ public class BinaryTreeRightSideViewRecursiveDFS {
   }
 
   // this is actually DSF with recursive reverse preorder
-  private void dfs(Node node, int level) {
+  private void dfs(TreeNode node, int level) {
     if (level == rightSide.size()) {
       rightSide.add(node.value);
     }

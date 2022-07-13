@@ -3,7 +3,7 @@ package dev.intermediatebox.tree;
 // Tag: BinaryTree
 // Tag: Recursive
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive {
 
   int preorderIndex;
 
-  public Node buildTree(int[] inorder, int[] preorder) {
+  public TreeNode buildTree(int[] inorder, int[] preorder) {
     this.preorder = preorder;
     this.inorder = inorder;
 
@@ -33,13 +33,13 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversalRecursive {
     return reconstructTree(0, preorder.length - 1);
   }
 
-  private Node reconstructTree(int inorderLeft, int inorderRight) {
+  private TreeNode reconstructTree(int inorderLeft, int inorderRight) {
     if (inorderLeft > inorderRight) {
       return null;
     }
 
     int rootValue = preorder[preorderIndex];
-    Node root = new Node(rootValue);
+    TreeNode root = new TreeNode(rootValue);
 
     // the root value splits inorder list into left and right subtrees
     int inorderIndex = inorderIndexes.get(rootValue);

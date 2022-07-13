@@ -2,7 +2,7 @@ package dev.intermediatebox.string;
 // Tag: Tree
 // Tag: Queue
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,7 +12,7 @@ import java.util.Queue;
 public class BinaryTreeBreadthFirstTraversal {
   List<Integer> traversed = new ArrayList<>();
 
-  public List<Integer> run(Node head) {
+  public List<Integer> run(TreeNode head) {
     if (head == null) {
       return traversed;
     }
@@ -22,13 +22,13 @@ public class BinaryTreeBreadthFirstTraversal {
     return traversed;
   }
 
-  private void breadthFirst(Node head) {
-    Queue<Node> queue = new LinkedList<>();
+  private void breadthFirst(TreeNode head) {
+    Queue<TreeNode> queue = new LinkedList<>();
 
     queue.add(head);
 
     while (!queue.isEmpty()) {
-      Node node = queue.poll();
+      TreeNode node = queue.poll();
       traversed.add(node.value);
 
       if(node.left != null) {

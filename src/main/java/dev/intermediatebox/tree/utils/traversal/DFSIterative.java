@@ -1,6 +1,6 @@
 package dev.intermediatebox.tree.utils.traversal;
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -8,14 +8,14 @@ import java.util.List;
 
 public class DFSIterative {
   // left -> node -> right
-  public static void inorder(Node root, List<Integer> traversal) {
+  public static void inorder(TreeNode root, List<Integer> traversal) {
     if (root == null) {
       return;
     }
 
-    Deque<Node> stack = new LinkedList<>();
+    Deque<TreeNode> stack = new LinkedList<>();
 
-    Node node = root;
+    TreeNode node = root;
     while (!stack.isEmpty() || node != null) {
       while (node != null) {
         stack.push(node);
@@ -30,16 +30,16 @@ public class DFSIterative {
   }
 
   // node -> left -> right
-  public static void preorder(Node root, List<Integer> traversal) {
+  public static void preorder(TreeNode root, List<Integer> traversal) {
     if (root == null) {
       return;
     }
 
-    Deque<Node> stack = new LinkedList<>();
+    Deque<TreeNode> stack = new LinkedList<>();
 
     stack.push(root);
     while (!stack.isEmpty()) {
-      Node node = stack.pop();
+      TreeNode node = stack.pop();
       traversal.add(node.value);
 
       if(node.right != null){
@@ -53,14 +53,14 @@ public class DFSIterative {
   }
 
   // left -> right -> node
-  public static void postorder(Node root, List<Integer> traversal) {
-    Deque<Node> stack1 = new LinkedList<>();
-    Deque<Node> stack2 = new LinkedList<>();
+  public static void postorder(TreeNode root, List<Integer> traversal) {
+    Deque<TreeNode> stack1 = new LinkedList<>();
+    Deque<TreeNode> stack2 = new LinkedList<>();
 
     stack1.push(root);
     while (!stack1.isEmpty()) {
       // insert root into second stack
-      Node node = stack1.pop();
+      TreeNode node = stack1.pop();
       stack2.push(node);
 
       // insert left and right nodes to first stack

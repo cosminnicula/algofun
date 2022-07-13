@@ -6,7 +6,7 @@ package dev.intermediatebox.tree;
 // Related:
 // BinaryTreeLevelOrderTraversal
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.*;
 
@@ -15,7 +15,7 @@ import java.util.*;
 public class BinaryTreeZigZagLevelOrderTraversal {
   List<List<Integer>> traversal = new ArrayList<>();
 
-  public List<List<Integer>> zigzagLevelOrder(Node root) {
+  public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
     if (root == null) {
       return traversal;
     }
@@ -25,11 +25,11 @@ public class BinaryTreeZigZagLevelOrderTraversal {
     return traversal;
   }
 
-  private void bfsIterative(Node node) {
+  private void bfsIterative(TreeNode node) {
     // can also be achieved with:
     // - two stacks: one stack for current level, and another stack for next level
     // - one queue: isReversed has opposite logic with the stack variant
-    Queue<Node> queue = new LinkedList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
 
     int level = 0;
     boolean isReversed = true;
@@ -40,7 +40,7 @@ public class BinaryTreeZigZagLevelOrderTraversal {
 
       int length = queue.size();
       for (int i = 0; i < length; i++) {
-        Node current = queue.remove();
+        TreeNode current = queue.remove();
 
         traversal.get(level).add(current.value);
 

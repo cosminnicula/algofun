@@ -3,19 +3,19 @@ package dev.intermediatebox.tree.RecoverBinarySearchTree;
 // Tag: BinaryTree
 // Tag: Iterative
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class RecoverBinarySearchTreeInorderIterative {
-  public void recoverTree(Node root) {
+  public void recoverTree(TreeNode root) {
     recover(root);
   }
 
-  private void recover(Node node) {
-    Deque<Node> stack = new ArrayDeque();
-    Node pred = null;
+  private void recover(TreeNode node) {
+    Deque<TreeNode> stack = new ArrayDeque();
+    TreeNode pred = null;
 
     while (!stack.isEmpty() || node != null) {
       while (node != null) {
@@ -32,7 +32,7 @@ public class RecoverBinarySearchTreeInorderIterative {
     }
   }
 
-  private void swap(Node node1, Node node2) {
+  private void swap(TreeNode node1, TreeNode node2) {
     int temp = node1.value;
     node1.value = node2.value;
     node2.value = temp;

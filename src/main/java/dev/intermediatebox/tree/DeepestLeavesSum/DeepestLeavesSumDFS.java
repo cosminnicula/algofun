@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.DeepestLeavesSum;
 // Tag: BinaryTree
 // Tag: Recursive
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 public class DeepestLeavesSumDFS {
   List<Integer> levelSums = new ArrayList<>();
 
-  public int deepestLeavesSum(Node root) {
+  public int deepestLeavesSum(TreeNode root) {
     if (root == null) {
       return 0;
     }
@@ -20,7 +20,7 @@ public class DeepestLeavesSumDFS {
     return levelSums.get(levelSums.size() - 1);
   }
 
-  private void dfs(Node node, int level) {
+  private void dfs(TreeNode node, int level) {
     if (node == null) {
       return;
     }

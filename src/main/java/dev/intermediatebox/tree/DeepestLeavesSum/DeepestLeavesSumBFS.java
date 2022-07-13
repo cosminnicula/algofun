@@ -3,9 +3,8 @@ package dev.intermediatebox.tree.DeepestLeavesSum;
 // Tag: BinaryTree
 // Tag: Iterative
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
-import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -13,12 +12,12 @@ import java.util.Queue;
 
 
 public class DeepestLeavesSumBFS {
-  public int deepestLeavesSum(Node root) {
+  public int deepestLeavesSum(TreeNode root) {
     if (root == null) {
       return 0;
     }
 
-    Queue<Node> queue = new LinkedList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
     int sum = 0;
 
     queue.add(root);
@@ -26,7 +25,7 @@ public class DeepestLeavesSumBFS {
       sum = 0;
       int queueSize = queue.size();
       for (int i = 0; i < queueSize; i++) {
-        Node node = queue.poll();
+        TreeNode node = queue.poll();
         sum += node.value;
 
         if (node.left != null) {

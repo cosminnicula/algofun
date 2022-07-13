@@ -3,7 +3,7 @@ package dev.intermediatebox.tree.BinaryTreeLevelOrderTraversal;
 // Tag: BinaryTree
 // Tag: Iterative
 
-import dev.intermediatebox.tree.utils.Node;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,12 +15,12 @@ import java.util.Queue;
 public class BinaryTreeLevelOrderTraversalIterative {
   List<List<Integer>> levels = new ArrayList<List<Integer>>();
 
-  public List<List<Integer>> levelOrder(Node root) {
+  public List<List<Integer>> levelOrder(TreeNode root) {
     if (root == null) {
       return levels;
     }
 
-    Queue<Node> queue = new LinkedList<Node>();
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
     queue.add(root);
     int level = 0;
 
@@ -29,7 +29,7 @@ public class BinaryTreeLevelOrderTraversalIterative {
 
       int levelSize = queue.size();
       for (int i = 0; i < levelSize; ++i) {
-        Node node = queue.remove();
+        TreeNode node = queue.remove();
 
         levels.get(level).add(node.value);
 
