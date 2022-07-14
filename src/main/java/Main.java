@@ -1,5 +1,7 @@
+import dev.intermediatebox.string.ListNode;
 import dev.intermediatebox.tree.BinaryTreeZigZagLevelOrderTraversal;
 import dev.intermediatebox.tree.ConvertSortedArrayToBinarySearchTree;
+import dev.intermediatebox.tree.ConvertSortedListToBinarySearchTree;
 import dev.intermediatebox.tree.utils.TreeNode;
 import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
 
@@ -367,11 +369,27 @@ public class Main {
 //
 //    System.out.println(bz.zigzagLevelOrder(root));
 
-    ConvertSortedArrayToBinarySearchTree ca = new ConvertSortedArrayToBinarySearchTree();
+//    ConvertSortedArrayToBinarySearchTree ca = new ConvertSortedArrayToBinarySearchTree();
+//
+//    int[] array = new int[] { -10, -3, 0, 5, 9 };
+//
+//    TreeNode root = ca.sortedArrayToBST(array);
+//
+//    List<Integer> traversal = new LinkedList<>();
+//
+//    DFSRecursive.inorder(root, traversal);
+//
+//    System.out.println(traversal);
 
-    int[] array = new int[] { -10, -3, 0, 5, 9 };
+    ConvertSortedListToBinarySearchTree cl = new ConvertSortedListToBinarySearchTree();
 
-    TreeNode root = ca.sortedArrayToBST(array);
+    ListNode head = new ListNode(-10);
+    head.next = new ListNode(-3);
+    head.next.next = new ListNode(0);
+    head.next.next.next = new ListNode(5);
+    head.next.next.next.next = new ListNode(9);
+
+    TreeNode root = cl.sortedListToBST(head);
 
     List<Integer> traversal = new LinkedList<>();
 

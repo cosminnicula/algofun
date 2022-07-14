@@ -1,4 +1,7 @@
 package dev.intermediatebox.tree;
+// Tag: Tree
+// Tag: BinaryTree
+// Tag: Recursive
 
 import dev.intermediatebox.tree.utils.TreeNode;
 
