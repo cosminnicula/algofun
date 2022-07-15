@@ -1,14 +1,13 @@
-import dev.intermediatebox.string.ListNode;
-import dev.intermediatebox.tree.BinaryTreeZigZagLevelOrderTraversal;
-import dev.intermediatebox.tree.ConvertSortedArrayToBinarySearchTree;
-import dev.intermediatebox.tree.ConvertSortedListToBinarySearchTree;
+// Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
+
+
+import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedListIterative;
+import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedListRecursive;
 import dev.intermediatebox.tree.utils.TreeNode;
 import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
 
 import java.util.LinkedList;
 import java.util.List;
-// Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
-
 
 public class Main {
   public static void main(String[] args) {
@@ -381,20 +380,60 @@ public class Main {
 //
 //    System.out.println(traversal);
 
-    ConvertSortedListToBinarySearchTree cl = new ConvertSortedListToBinarySearchTree();
+//    ConvertSortedListToBinarySearchTree cl = new ConvertSortedListToBinarySearchTree();
+//
+//    ListNode head = new ListNode(-10);
+//    head.next = new ListNode(-3);
+//    head.next.next = new ListNode(0);
+//    head.next.next.next = new ListNode(5);
+//    head.next.next.next.next = new ListNode(9);
+//
+//    TreeNode root = cl.sortedListToBST(head);
+//
+//    List<Integer> traversal = new LinkedList<>();
+//
+//    DFSRecursive.inorder(root, traversal);
+//
+//    System.out.println(traversal);
 
-    ListNode head = new ListNode(-10);
-    head.next = new ListNode(-3);
-    head.next.next = new ListNode(0);
-    head.next.next.next = new ListNode(5);
-    head.next.next.next.next = new ListNode(9);
+    FlattenBinaryTreeToLinkedListRecursive fr = new FlattenBinaryTreeToLinkedListRecursive();
 
-    TreeNode root = cl.sortedListToBST(head);
+    TreeNode root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(5);
+    root.left.left = new TreeNode(3);
+    root.left.right = new TreeNode(4);
+    root.right.right = new TreeNode(6);
 
     List<Integer> traversal = new LinkedList<>();
-
-    DFSRecursive.inorder(root, traversal);
-
+    DFSRecursive.preorder(root, traversal);
     System.out.println(traversal);
+
+    fr.flatten(root);
+
+    while (root != null ) {
+      System.out.println(root.value);
+      root = root.right;
+    }
+
+    FlattenBinaryTreeToLinkedListIterative fi = new FlattenBinaryTreeToLinkedListIterative();
+
+    root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(5);
+    root.left.left = new TreeNode(3);
+    root.left.right = new TreeNode(4);
+    root.right.right = new TreeNode(6);
+
+    traversal = new LinkedList<>();
+    DFSRecursive.preorder(root, traversal);
+    System.out.println(traversal);
+
+    fi.flatten(root);
+
+    while (root != null ) {
+      System.out.println(root.value);
+      root = root.right;
+    }
   }
 }
