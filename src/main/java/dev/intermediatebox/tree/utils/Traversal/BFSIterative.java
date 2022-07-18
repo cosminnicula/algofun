@@ -1,4 +1,4 @@
-package dev.intermediatebox.tree.utils.traversal;
+package dev.intermediatebox.tree.utils.Traversal;
 
 import dev.intermediatebox.tree.utils.TreeNode;
 

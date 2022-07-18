@@ -4,7 +4,7 @@ package dev.intermediatebox.tree.RecoverBinarySearchTree;
 // Tag: Recursion
 
 import dev.intermediatebox.tree.utils.TreeNode;
-import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
+import dev.intermediatebox.tree.utils.Traversal.DFSRecursive;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,9 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedListIterative;
-import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedListRecursive;
-import dev.intermediatebox.tree.utils.TreeNode;
-import dev.intermediatebox.tree.utils.traversal.DFSRecursive;
+import dev.intermediatebox.tree.PopulateNextRightPointersInEachNode;
+import dev.intermediatebox.tree.utils.TraversalWithLink.LevelIterative;
+import dev.intermediatebox.tree.utils.TreeNodeWithLink;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -396,44 +395,60 @@ public class Main {
 //
 //    System.out.println(traversal);
 
-    FlattenBinaryTreeToLinkedListRecursive fr = new FlattenBinaryTreeToLinkedListRecursive();
+//    FlattenBinaryTreeToLinkedListRecursive fr = new FlattenBinaryTreeToLinkedListRecursive();
+//
+//    TreeNode root = new TreeNode(1);
+//    root.left = new TreeNode(2);
+//    root.right = new TreeNode(5);
+//    root.left.left = new TreeNode(3);
+//    root.left.right = new TreeNode(4);
+//    root.right.right = new TreeNode(6);
+//
+//    List<Integer> traversal = new LinkedList<>();
+//    DFSRecursive.preorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    fr.flatten(root);
+//
+//    while (root != null ) {
+//      System.out.println(root.value);
+//      root = root.right;
+//    }
+//
+//    FlattenBinaryTreeToLinkedListIterative fi = new FlattenBinaryTreeToLinkedListIterative();
+//
+//    root = new TreeNode(1);
+//    root.left = new TreeNode(2);
+//    root.right = new TreeNode(5);
+//    root.left.left = new TreeNode(3);
+//    root.left.right = new TreeNode(4);
+//    root.right.right = new TreeNode(6);
+//
+//    traversal = new LinkedList<>();
+//    DFSRecursive.preorder(root, traversal);
+//    System.out.println(traversal);
+//
+//    fi.flatten(root);
+//
+//    while (root != null ) {
+//      System.out.println(root.value);
+//      root = root.right;
+//    }
 
-    TreeNode root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(5);
-    root.left.left = new TreeNode(3);
-    root.left.right = new TreeNode(4);
-    root.right.right = new TreeNode(6);
+    PopulateNextRightPointersInEachNode p = new PopulateNextRightPointersInEachNode();
+
+    TreeNodeWithLink root = new TreeNodeWithLink(1);
+    root.left = new TreeNodeWithLink(2);
+    root.right = new TreeNodeWithLink(3);
+    root.left.left = new TreeNodeWithLink(4);
+    root.left.right = new TreeNodeWithLink(5);
+    root.right.left = new TreeNodeWithLink(6);
+    root.right.right = new TreeNodeWithLink(7);
+
+    p.connect(root);
 
     List<Integer> traversal = new LinkedList<>();
-    DFSRecursive.preorder(root, traversal);
+    LevelIterative.traverse(root, traversal);
     System.out.println(traversal);
-
-    fr.flatten(root);
-
-    while (root != null ) {
-      System.out.println(root.value);
-      root = root.right;
-    }
-
-    FlattenBinaryTreeToLinkedListIterative fi = new FlattenBinaryTreeToLinkedListIterative();
-
-    root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(5);
-    root.left.left = new TreeNode(3);
-    root.left.right = new TreeNode(4);
-    root.right.right = new TreeNode(6);
-
-    traversal = new LinkedList<>();
-    DFSRecursive.preorder(root, traversal);
-    System.out.println(traversal);
-
-    fi.flatten(root);
-
-    while (root != null ) {
-      System.out.println(root.value);
-      root = root.right;
-    }
   }
 }
