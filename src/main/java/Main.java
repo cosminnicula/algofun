@@ -2,7 +2,9 @@
 
 
 import dev.intermediatebox.tree.PopulateNextRightPointersInEachNode;
+import dev.intermediatebox.tree.SumRootToLeafNumbers;
 import dev.intermediatebox.tree.utils.TraversalWithLink.LevelIterative;
+import dev.intermediatebox.tree.utils.TreeNode;
 import dev.intermediatebox.tree.utils.TreeNodeWithLink;
 
 import java.util.LinkedList;
@@ -434,21 +436,31 @@ public class Main {
 //      System.out.println(root.value);
 //      root = root.right;
 //    }
+//
+//    PopulateNextRightPointersInEachNode p = new PopulateNextRightPointersInEachNode();
+//
+//    TreeNodeWithLink root = new TreeNodeWithLink(1);
+//    root.left = new TreeNodeWithLink(2);
+//    root.right = new TreeNodeWithLink(3);
+//    root.left.left = new TreeNodeWithLink(4);
+//    root.left.right = new TreeNodeWithLink(5);
+//    root.right.left = new TreeNodeWithLink(6);
+//    root.right.right = new TreeNodeWithLink(7);
+//
+//    p.connect(root);
+//
+//    List<Integer> traversal = new LinkedList<>();
+//    LevelIterative.traverse(root, traversal);
+//    System.out.println(traversal);
 
-    PopulateNextRightPointersInEachNode p = new PopulateNextRightPointersInEachNode();
+    SumRootToLeafNumbers s = new SumRootToLeafNumbers();
 
-    TreeNodeWithLink root = new TreeNodeWithLink(1);
-    root.left = new TreeNodeWithLink(2);
-    root.right = new TreeNodeWithLink(3);
-    root.left.left = new TreeNodeWithLink(4);
-    root.left.right = new TreeNodeWithLink(5);
-    root.right.left = new TreeNodeWithLink(6);
-    root.right.right = new TreeNodeWithLink(7);
+    TreeNode root = new TreeNode(4);
+    root.left = new TreeNode(9);
+    root.right = new TreeNode(0);
+    root.left.left = new TreeNode(5);
+    root.left.right = new TreeNode(1);
 
-    p.connect(root);
-
-    List<Integer> traversal = new LinkedList<>();
-    LevelIterative.traverse(root, traversal);
-    System.out.println(traversal);
+    System.out.println(s.sumNumbers(root));
   }
 }
