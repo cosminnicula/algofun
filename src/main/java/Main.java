@@ -1,6 +1,8 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
+import dev.intermediatebox.tree.BinarySearchTreeIterator.BinarySearchTreeIterator1;
+import dev.intermediatebox.tree.BinarySearchTreeIterator.BinarySearchTreeIterator2;
 import dev.intermediatebox.tree.PopulateNextRightPointersInEachNode;
 import dev.intermediatebox.tree.SumRootToLeafNumbers;
 import dev.intermediatebox.tree.utils.TraversalWithLink.LevelIterative;
@@ -453,14 +455,32 @@ public class Main {
 //    LevelIterative.traverse(root, traversal);
 //    System.out.println(traversal);
 
-    SumRootToLeafNumbers s = new SumRootToLeafNumbers();
+//    SumRootToLeafNumbers s = new SumRootToLeafNumbers();
+//
+//    TreeNode root = new TreeNode(4);
+//    root.left = new TreeNode(9);
+//    root.right = new TreeNode(0);
+//    root.left.left = new TreeNode(5);
+//    root.left.right = new TreeNode(1);
+//
+//    System.out.println(s.sumNumbers(root));
 
-    TreeNode root = new TreeNode(4);
-    root.left = new TreeNode(9);
-    root.right = new TreeNode(0);
-    root.left.left = new TreeNode(5);
-    root.left.right = new TreeNode(1);
+    TreeNode root = new TreeNode(7);
+    root.left = new TreeNode(3);
+    root.right = new TreeNode(15);
+    root.right.left = new TreeNode(9);
+    root.right.right = new TreeNode(20);
 
-    System.out.println(s.sumNumbers(root));
+    BinarySearchTreeIterator1 b1 = new BinarySearchTreeIterator1(root);
+
+    while (b1.hasNext()) {
+      System.out.println(b1.next());
+    }
+
+    BinarySearchTreeIterator2 b2 = new BinarySearchTreeIterator2(root);
+
+    while (b2.hasNext()) {
+      System.out.println(b2.next());
+    }
   }
 }
