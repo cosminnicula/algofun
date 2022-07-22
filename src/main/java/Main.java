@@ -3,6 +3,7 @@
 
 import dev.intermediatebox.tree.BinarySearchTreeIterator.BinarySearchTreeIterator1;
 import dev.intermediatebox.tree.BinarySearchTreeIterator.BinarySearchTreeIterator2;
+import dev.intermediatebox.tree.CountCompleteTreeNodes;
 import dev.intermediatebox.tree.PopulateNextRightPointersInEachNode;
 import dev.intermediatebox.tree.SumRootToLeafNumbers;
 import dev.intermediatebox.tree.utils.TraversalWithLink.LevelIterative;
@@ -465,22 +466,32 @@ public class Main {
 //
 //    System.out.println(s.sumNumbers(root));
 
-    TreeNode root = new TreeNode(7);
-    root.left = new TreeNode(3);
-    root.right = new TreeNode(15);
-    root.right.left = new TreeNode(9);
-    root.right.right = new TreeNode(20);
+//    TreeNode root = new TreeNode(7);
+//    root.left = new TreeNode(3);
+//    root.right = new TreeNode(15);
+//    root.right.left = new TreeNode(9);
+//    root.right.right = new TreeNode(20);
+//
+//    BinarySearchTreeIterator1 b1 = new BinarySearchTreeIterator1(root);
+//
+//    while (b1.hasNext()) {
+//      System.out.println(b1.next());
+//    }
+//
+//    BinarySearchTreeIterator2 b2 = new BinarySearchTreeIterator2(root);
+//
+//    while (b2.hasNext()) {
+//      System.out.println(b2.next());
+//    }
 
-    BinarySearchTreeIterator1 b1 = new BinarySearchTreeIterator1(root);
+    CountCompleteTreeNodes c = new CountCompleteTreeNodes();
+    TreeNode root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(3);
+    root.left.left = new TreeNode(4);
+    root.left.right = new TreeNode(5);
+    root.right.left = new TreeNode(6);
 
-    while (b1.hasNext()) {
-      System.out.println(b1.next());
-    }
-
-    BinarySearchTreeIterator2 b2 = new BinarySearchTreeIterator2(root);
-
-    while (b2.hasNext()) {
-      System.out.println(b2.next());
-    }
+    System.out.println(c.countNodes(root));
   }
 }
