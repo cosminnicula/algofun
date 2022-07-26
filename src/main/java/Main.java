@@ -1,6 +1,9 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
+import dev.intermediatebox.array.RangeSumQuery2DImmutable;
+import dev.intermediatebox.array.SearchA2DMatrix.SearchA2DMatrix1;
+import dev.intermediatebox.array.SearchA2DMatrix.SearchA2DMatrix2;
 import dev.intermediatebox.tree.KthSmallestElementInBST.KthSmallestElementInBSTIterative;
 import dev.intermediatebox.tree.KthSmallestElementInBST.KthSmallestElementInBSTRecursive;
 import dev.intermediatebox.tree.utils.TreeNode;
@@ -486,19 +489,48 @@ public class Main {
 //
 //    System.out.println(c.countNodes(root));
 
-    KthSmallestElementInBSTRecursive kr = new KthSmallestElementInBSTRecursive();
+//    KthSmallestElementInBSTRecursive kr = new KthSmallestElementInBSTRecursive();
+//
+//    TreeNode root = new TreeNode(5);
+//    root.left = new TreeNode(3);
+//    root.right = new TreeNode(6);
+//    root.left.left = new TreeNode(2);
+//    root.left.right = new TreeNode(4);
+//    root.left.left.left = new TreeNode(1);
+//
+//    System.out.println(kr.kthSmallest(root, 4));
+//
+//    KthSmallestElementInBSTIterative ki = new KthSmallestElementInBSTIterative();
+//
+//    System.out.println(ki.kthSmallest(root, 4));
 
-    TreeNode root = new TreeNode(5);
-    root.left = new TreeNode(3);
-    root.right = new TreeNode(6);
-    root.left.left = new TreeNode(2);
-    root.left.right = new TreeNode(4);
-    root.left.left.left = new TreeNode(1);
+//    SearchA2DMatrix1 s1 = new SearchA2DMatrix1();
+//    int[][] matrix = new int[][] {
+//        { 1, 4, 7, 11, 15 },
+//        { 2, 5, 8, 12, 19 },
+//        { 3, 6, 9, 16, 22 },
+//        { 10, 13, 14, 17, 24 },
+//        { 18, 21, 23, 26, 30 },
+//    };
+//
+//    System.out.println(s1.searchMatrix(matrix, 5));
+//
+//    SearchA2DMatrix2 s2 = new SearchA2DMatrix2();
+//
+//    System.out.println(s2.searchMatrix(matrix, 5));
 
-    System.out.println(kr.kthSmallest(root, 4));
+    int[][] matrix = new int[][]{
+        {3, 0, 1, 4, 2},
+        {5, 6, 3, 2, 1},
+        {1, 2, 0, 1, 5},
+        {4, 1, 0, 1, 7},
+        {1, 0, 3, 0, 5},
+    };
 
-    KthSmallestElementInBSTIterative ki = new KthSmallestElementInBSTIterative();
+    RangeSumQuery2DImmutable r = new RangeSumQuery2DImmutable(matrix);
 
-    System.out.println(ki.kthSmallest(root, 4));
+    System.out.println(r.sumRegion(2, 1, 4, 3));
+    System.out.println(r.sumRegion(1, 1, 2, 2));
+    System.out.println(r.sumRegion(0, 0, 0, 0));
   }
 }
