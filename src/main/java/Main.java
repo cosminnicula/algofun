@@ -1,17 +1,9 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.tree.BinarySearchTreeIterator.BinarySearchTreeIterator1;
-import dev.intermediatebox.tree.BinarySearchTreeIterator.BinarySearchTreeIterator2;
-import dev.intermediatebox.tree.CountCompleteTreeNodes;
-import dev.intermediatebox.tree.PopulateNextRightPointersInEachNode;
-import dev.intermediatebox.tree.SumRootToLeafNumbers;
-import dev.intermediatebox.tree.utils.TraversalWithLink.LevelIterative;
+import dev.intermediatebox.tree.KthSmallestElementInBST.KthSmallestElementInBSTIterative;
+import dev.intermediatebox.tree.KthSmallestElementInBST.KthSmallestElementInBSTRecursive;
 import dev.intermediatebox.tree.utils.TreeNode;
-import dev.intermediatebox.tree.utils.TreeNodeWithLink;
-
-import java.util.LinkedList;
-import java.util.List;
 
 public class Main {
   public static void main(String[] args) {
@@ -484,14 +476,29 @@ public class Main {
 //      System.out.println(b2.next());
 //    }
 
-    CountCompleteTreeNodes c = new CountCompleteTreeNodes();
-    TreeNode root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(3);
-    root.left.left = new TreeNode(4);
-    root.left.right = new TreeNode(5);
-    root.right.left = new TreeNode(6);
+//    CountCompleteTreeNodes c = new CountCompleteTreeNodes();
+//    TreeNode root = new TreeNode(1);
+//    root.left = new TreeNode(2);
+//    root.right = new TreeNode(3);
+//    root.left.left = new TreeNode(4);
+//    root.left.right = new TreeNode(5);
+//    root.right.left = new TreeNode(6);
+//
+//    System.out.println(c.countNodes(root));
 
-    System.out.println(c.countNodes(root));
+    KthSmallestElementInBSTRecursive kr = new KthSmallestElementInBSTRecursive();
+
+    TreeNode root = new TreeNode(5);
+    root.left = new TreeNode(3);
+    root.right = new TreeNode(6);
+    root.left.left = new TreeNode(2);
+    root.left.right = new TreeNode(4);
+    root.left.left.left = new TreeNode(1);
+
+    System.out.println(kr.kthSmallest(root, 4));
+
+    KthSmallestElementInBSTIterative ki = new KthSmallestElementInBSTIterative();
+
+    System.out.println(ki.kthSmallest(root, 4));
   }
 }
