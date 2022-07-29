@@ -1,12 +1,7 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.array.RangeSumQuery2DImmutable;
-import dev.intermediatebox.array.SearchA2DMatrix.SearchA2DMatrix1;
-import dev.intermediatebox.array.SearchA2DMatrix.SearchA2DMatrix2;
-import dev.intermediatebox.tree.KthSmallestElementInBST.KthSmallestElementInBSTIterative;
-import dev.intermediatebox.tree.KthSmallestElementInBST.KthSmallestElementInBSTRecursive;
-import dev.intermediatebox.tree.utils.TreeNode;
+import dev.intermediatebox.array.CountNumberOfTicTacToeGames;
 
 public class Main {
   public static void main(String[] args) {
@@ -519,18 +514,30 @@ public class Main {
 //
 //    System.out.println(s2.searchMatrix(matrix, 5));
 
-    int[][] matrix = new int[][]{
-        {3, 0, 1, 4, 2},
-        {5, 6, 3, 2, 1},
-        {1, 2, 0, 1, 5},
-        {4, 1, 0, 1, 7},
-        {1, 0, 3, 0, 5},
+//    int[][] matrix = new int[][]{
+//        {3, 0, 1, 4, 2},
+//        {5, 6, 3, 2, 1},
+//        {1, 2, 0, 1, 5},
+//        {4, 1, 0, 1, 7},
+//        {1, 0, 3, 0, 5},
+//    };
+//
+//    RangeSumQuery2DImmutable r = new RangeSumQuery2DImmutable(matrix);
+//
+//    System.out.println(r.sumRegion(2, 1, 4, 3));
+//    System.out.println(r.sumRegion(1, 1, 2, 2));
+//    System.out.println(r.sumRegion(0, 0, 0, 0));
+
+    CountNumberOfTicTacToeGames c = new CountNumberOfTicTacToeGames();
+
+    int[][] board = new int[][]{
+        {-1, -1, -1},
+        {-1, -1, -1},
+        {-1, -1, -1},
     };
 
-    RangeSumQuery2DImmutable r = new RangeSumQuery2DImmutable(matrix);
+    int total = c.computeTotal(board, 0, 0);
 
-    System.out.println(r.sumRegion(2, 1, 4, 3));
-    System.out.println(r.sumRegion(1, 1, 2, 2));
-    System.out.println(r.sumRegion(0, 0, 0, 0));
+    System.out.println("total number of tic tac toe games (including wins and draws): " + total);
   }
 }
