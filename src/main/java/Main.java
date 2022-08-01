@@ -1,7 +1,9 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.array.CountNumberOfTicTacToeGames;
+import dev.intermediatebox.array.*;
+
+import java.util.Arrays;
 
 public class Main {
   public static void main(String[] args) {
@@ -528,16 +530,62 @@ public class Main {
 //    System.out.println(r.sumRegion(1, 1, 2, 2));
 //    System.out.println(r.sumRegion(0, 0, 0, 0));
 
-    CountNumberOfTicTacToeGames c = new CountNumberOfTicTacToeGames();
+//    CountNumberOfTicTacToeGames c = new CountNumberOfTicTacToeGames();
+//
+//    int[][] board = new int[][]{
+//        {-1, -1, -1},
+//        {-1, -1, -1},
+//        {-1, -1, -1},
+//    };
+//
+//    int total = c.computeTotal(board, 0, 0);
+//
+//    System.out.println("total number of tic tac toe games (including wins and draws): " + total);
 
-    int[][] board = new int[][]{
-        {-1, -1, -1},
-        {-1, -1, -1},
-        {-1, -1, -1},
+//    QueueReconstructionByHeight q = new QueueReconstructionByHeight();
+//
+//    int[][] people = new int[][]{
+//        {7, 0},
+//        {4, 4},
+//        {7, 1},
+//        {5, 0},
+//        {6, 1},
+//        {5, 2},
+//    };
+//
+//    var solution = q.reconstructQueue(people);
+//    for (int[] element: solution) {
+//      System.out.println(element[0] + "," + element[1]);
+//    }
+
+//    CircularQueue c = new CircularQueue(3);
+//    System.out.println(c.enQueue(1)); // return True
+//    System.out.println(c.enQueue(2)); // return True
+//    System.out.println(c.enQueue(3)); // return True
+//    System.out.println(c.enQueue(4)); // return False
+//    System.out.println(c.Rear());     // return 3
+//    System.out.println(c.isFull());   // return True
+//    System.out.println(c.deQueue());  // return True
+//    System.out.println(c.enQueue(4)); // return True
+//    System.out.println(c.Rear());     // return 4
+
+//    SumOfEvenNumbersAfterQueries s = new SumOfEvenNumbersAfterQueries();
+//
+//    int[] nums = new int[]{1, 2, 3, 4};
+//    int[][] queries = new int[][]{
+//        {1, 0},
+//        {-3, 1},
+//        {-4, 0},
+//        {2, 3}
+//    };
+//
+//    System.out.println(Arrays.toString(s.sumEvenAfterQueries(nums, queries)));
+
+    QueensThatCanAttackTheKing q = new QueensThatCanAttackTheKing();
+    int[][] queens = new int[][]{
+        {5, 6}, {7, 7}, {2, 1}, {0, 7}, {1, 6}, {5, 1}, {3, 7}, {0, 3}, {4, 0}, {1, 2}, {6, 3}, {5, 0}, {0, 4}, {2, 2}, {1, 1}, {6, 4}, {5, 4}, {0, 0}, {2, 6}, {4, 5}, {5, 2}, {1, 4}, {7, 5}, {2, 3}, {0, 5}, {4, 2}, {1, 0}, {2, 7}, {0, 1}, {4, 6}, {6, 1}, {0, 6}, {4, 3}, {1, 7}
     };
-
-    int total = c.computeTotal(board, 0, 0);
-
-    System.out.println("total number of tic tac toe games (including wins and draws): " + total);
+    int[] king = new int[]{3, 4};
+    System.out.println(q.queensAttacktheKing(queens, king));
   }
 }
