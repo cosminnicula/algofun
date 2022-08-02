@@ -1,9 +1,7 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.array.QueriesOnNumberOfPointsInsideACircle.QueriesOnNumberOfPointsInsideACircle;
-import dev.intermediatebox.array.WordSubsets;
-import dev.intermediatebox.array.utils.Search;
+import dev.intermediatebox.array.utils.sort.MergeSort;
 
 import java.util.Arrays;
 
@@ -606,12 +604,16 @@ public class Main {
 //    System.out.println(Search.binarySearchRecursive(array, 15));
 //    System.out.println(Search.binarySearchRecursive(array, 99));
 
-    WordSubsets w = new WordSubsets();
-    String[] A = new String[]{"amazon", "apple", "facebook", "google", "leetcode"};
-    String[] B = new String[]{"e", "o"};
-    System.out.println(w.wordSubsets(A, B));
-    A = new String[]{"warrior", "world"};
-    B = new String[]{"wrr"};
-    System.out.println(w.wordSubsets(A, B));
+//    WordSubsets w = new WordSubsets();
+//    String[] A = new String[]{"amazon", "apple", "facebook", "google", "leetcode"};
+//    String[] B = new String[]{"e", "o"};
+//    System.out.println(w.wordSubsets(A, B));
+//    A = new String[]{"warrior", "world"};
+//    B = new String[]{"wrr"};
+//    System.out.println(w.wordSubsets(A, B));
+
+    int[] array = new int[]{3, 5, 1, 2, 8, 4, 9};
+    MergeSort.sort(array);
+    System.out.println(Arrays.toString(array));
   }
 }
