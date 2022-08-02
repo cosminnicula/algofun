@@ -1,7 +1,9 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.array.*;
+import dev.intermediatebox.array.QueriesOnNumberOfPointsInsideACircle.QueriesOnNumberOfPointsInsideACircle;
+import dev.intermediatebox.array.WordSubsets;
+import dev.intermediatebox.array.utils.Search;
 
 import java.util.Arrays;
 
@@ -588,13 +590,28 @@ public class Main {
 //    int[] king = new int[]{3, 4};
 //    System.out.println(q.queensAttacktheKing(queens, king));
 
-    QueriesOnNumberOfPointsInsideACircle q = new QueriesOnNumberOfPointsInsideACircle();
-    int[][] points = new int[][]{
-        {1, 3}, {3, 3}, {5, 3}, {2, 2}
-    };
-    int[][] queries = new int[][]{
-        {2, 3, 1}, {4, 3, 1}, {1, 1, 2}
-    };
-    System.out.println(Arrays.toString(q.countPoints(points, queries)));
+//    QueriesOnNumberOfPointsInsideACircle q = new QueriesOnNumberOfPointsInsideACircle();
+//    int[][] points = new int[][]{
+//        {1, 3}, {3, 3}, {5, 3}, {2, 2}
+//    };
+//    int[][] queries = new int[][]{
+//        {2, 3, 1}, {4, 3, 1}, {1, 1, 2}
+//    };
+//    System.out.println(Arrays.toString(q.countPoints(points, queries)));
+
+
+//    int[] array = new int[]{1, 5, 8, 9, 15};
+//    System.out.println(Search.binarySearchIterative(array, 15));
+//    System.out.println(Search.binarySearchIterative(array, 99));
+//    System.out.println(Search.binarySearchRecursive(array, 15));
+//    System.out.println(Search.binarySearchRecursive(array, 99));
+
+    WordSubsets w = new WordSubsets();
+    String[] A = new String[]{"amazon", "apple", "facebook", "google", "leetcode"};
+    String[] B = new String[]{"e", "o"};
+    System.out.println(w.wordSubsets(A, B));
+    A = new String[]{"warrior", "world"};
+    B = new String[]{"wrr"};
+    System.out.println(w.wordSubsets(A, B));
   }
 }
