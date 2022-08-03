@@ -1,7 +1,9 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList1;
+import dev.intermediatebox.list.ReorderList;
+import dev.intermediatebox.string.ListNode;
+import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList;
 import dev.intermediatebox.tree.utils.TreeNode;
 
 public class Main {
@@ -615,21 +617,40 @@ public class Main {
 //    MergeSort.sort(array);
 //    System.out.println(Arrays.toString(array));
 
-    FlattenBinaryTreeToLinkedList1 f = new FlattenBinaryTreeToLinkedList1();
+//    FlattenBinaryTreeToLinkedList f = new FlattenBinaryTreeToLinkedList();
+//
+//    TreeNode root = new TreeNode(1);
+//    root.left = new TreeNode(2);
+//    root.right = new TreeNode(5);
+//    root.left.left = new TreeNode(3);
+//    root.left.right = new TreeNode(4);
+//    root.right.right = new TreeNode(6);
+//
+//    f.flatten(root);
+//
+//    TreeNode current = root;
+//    while (current != null) {
+//      System.out.println(current.value);
+//      current = current.right;
+//    }
 
-    TreeNode root = new TreeNode(1);
-    root.left = new TreeNode(2);
-    root.right = new TreeNode(5);
-    root.left.left = new TreeNode(3);
-    root.left.right = new TreeNode(4);
-    root.right.right = new TreeNode(6);
+    ReorderList r = new ReorderList();
 
-    f.flatten(root);
+    ListNode head = new ListNode(1);
+    head.next = new ListNode(2);
+    head.next.next = new ListNode(3);
+    head.next.next.next = new ListNode(4);
+    head.next.next.next.next = new ListNode(5);
+    head.next.next.next.next.next = new ListNode(6);
+    head.next.next.next.next.next.next = new ListNode(7);
+    head.next.next.next.next.next.next.next = new ListNode(8);
 
-    TreeNode current = root;
+    r.reorderList(head);
+
+    ListNode current = head;
     while (current != null) {
       System.out.println(current.value);
-      current = current.right;
+      current = current.next;
     }
   }
 }

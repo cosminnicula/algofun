@@ -8,7 +8,7 @@ import dev.intermediatebox.tree.utils.TreeNode;
 // O(n) time complexity
 // O(n) space complexity
 public class FlattenBinaryTreeToLinkedListRecursive {
-  TreeNode head = null;
+  TreeNode previous = null;
 
   public void flatten(TreeNode root) {
     if (root == null) {
@@ -28,8 +28,8 @@ public class FlattenBinaryTreeToLinkedListRecursive {
 
     flattenTree(node.left);
 
-    node.right = head;
+    node.right = previous;
     node.left = null;
-    head = node;
+    previous = node;
   }
 }

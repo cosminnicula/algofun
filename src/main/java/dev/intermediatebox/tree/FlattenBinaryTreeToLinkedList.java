@@ -1,4 +1,4 @@
-package dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList;
+package dev.intermediatebox.tree;
 // Tag: LinkedList
 // Tag: Stack
 // Tag: Tree
@@ -7,8 +7,8 @@ package dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList;
 import dev.intermediatebox.tree.utils.TreeNode;
 
 // O(n) time complexity
-// O(n) space complexity
-public class FlattenBinaryTreeToLinkedList1 {
+// O(logn) space complexity
+public class FlattenBinaryTreeToLinkedList {
   public void flatten(TreeNode root) {
     if (root == null) {
       return;
