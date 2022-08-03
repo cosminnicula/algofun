@@ -1,9 +1,8 @@
 // Search by both tags in any order: (?s)^(?=.*?Tag: Recursion)(?=.*?Tag: String)
 
 
-import dev.intermediatebox.array.utils.sort.MergeSort;
-
-import java.util.Arrays;
+import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList.FlattenBinaryTreeToLinkedList1;
+import dev.intermediatebox.tree.utils.TreeNode;
 
 public class Main {
   public static void main(String[] args) {
@@ -392,7 +391,7 @@ public class Main {
 //
 //    System.out.println(traversal);
 
-//    FlattenBinaryTreeToLinkedListRecursive fr = new FlattenBinaryTreeToLinkedListRecursive();
+//    FlattenBinaryTreeToLinkedListRecursive2 fr = new FlattenBinaryTreeToLinkedListRecursive2();
 //
 //    TreeNode root = new TreeNode(1);
 //    root.left = new TreeNode(2);
@@ -412,7 +411,7 @@ public class Main {
 //      root = root.right;
 //    }
 //
-//    FlattenBinaryTreeToLinkedListIterative fi = new FlattenBinaryTreeToLinkedListIterative();
+//    FlattenBinaryTreeToLinkedListIterative2 fi = new FlattenBinaryTreeToLinkedListIterative2();
 //
 //    root = new TreeNode(1);
 //    root.left = new TreeNode(2);
@@ -612,8 +611,25 @@ public class Main {
 //    B = new String[]{"wrr"};
 //    System.out.println(w.wordSubsets(A, B));
 
-    int[] array = new int[]{3, 5, 1, 2, 8, 4, 9};
-    MergeSort.sort(array);
-    System.out.println(Arrays.toString(array));
+//    int[] array = new int[]{3, 5, 1, 2, 8, 4, 9};
+//    MergeSort.sort(array);
+//    System.out.println(Arrays.toString(array));
+
+    FlattenBinaryTreeToLinkedList1 f = new FlattenBinaryTreeToLinkedList1();
+
+    TreeNode root = new TreeNode(1);
+    root.left = new TreeNode(2);
+    root.right = new TreeNode(5);
+    root.left.left = new TreeNode(3);
+    root.left.right = new TreeNode(4);
+    root.right.right = new TreeNode(6);
+
+    f.flatten(root);
+
+    TreeNode current = root;
+    while (current != null) {
+      System.out.println(current.value);
+      current = current.right;
+    }
   }
 }

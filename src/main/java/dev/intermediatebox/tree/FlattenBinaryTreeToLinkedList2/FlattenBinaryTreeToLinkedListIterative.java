@@ -1,4 +1,4 @@
-package dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList;
+package dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList2;
 // Tag: Tree
 // Tag: BinaryTree
 // Tag: Iterative
