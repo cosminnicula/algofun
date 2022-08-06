@@ -2,6 +2,7 @@
 
 
 import dev.intermediatebox.list.ReorderList;
+import dev.intermediatebox.string.AdditiveNumber;
 import dev.intermediatebox.string.ListNode;
 import dev.intermediatebox.tree.FlattenBinaryTreeToLinkedList;
 import dev.intermediatebox.tree.utils.TreeNode;
@@ -112,8 +113,8 @@ public class Main {
 //    RemoveDuplicateLetters r = new RemoveDuplicateLetters();
 //    System.out.println(r.removeDuplicateLetters("cbacdcbc"));
 
-//    AdditiveNumber a = new AdditiveNumber();
-//    System.out.println(a.isAdditiveNumber("112358"));
+    AdditiveNumber a = new AdditiveNumber();
+    System.out.println(a.isAdditiveNumber("112358"));
 
 //    VerifyPreorderSerializationOfABinaryTree v = new VerifyPreorderSerializationOfABinaryTree();
 //    System.out.println(v.isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"));
@@ -634,23 +635,23 @@ public class Main {
 //      current = current.right;
 //    }
 
-    ReorderList r = new ReorderList();
+//    ReorderList r = new ReorderList();
+//
+//    ListNode head = new ListNode(1);
+//    head.next = new ListNode(2);
+//    head.next.next = new ListNode(3);
+//    head.next.next.next = new ListNode(4);
+//    head.next.next.next.next = new ListNode(5);
+//    head.next.next.next.next.next = new ListNode(6);
+//
+//    r.reorderList(head);
+//
+//    ListNode current = head;
+//    while (current != null) {
+//      System.out.println(current.value);
+//      current = current.next;
+//    }
 
-    ListNode head = new ListNode(1);
-    head.next = new ListNode(2);
-    head.next.next = new ListNode(3);
-    head.next.next.next = new ListNode(4);
-    head.next.next.next.next = new ListNode(5);
-    head.next.next.next.next.next = new ListNode(6);
-    head.next.next.next.next.next.next = new ListNode(7);
-    head.next.next.next.next.next.next.next = new ListNode(8);
 
-    r.reorderList(head);
-
-    ListNode current = head;
-    while (current != null) {
-      System.out.println(current.value);
-      current = current.next;
-    }
   }
 }

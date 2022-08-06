@@ -28,7 +28,7 @@ public class ReorderList {
 
     splitList();
 
-    l2Head = reverseList(l2Head);
+    l2Head = reverseList2(l2Head);
 
     mergeLists(l1Head, l2Head);
   }
@@ -47,6 +47,7 @@ public class ReorderList {
     l1Tail.next = null;
   }
 
+  // iterative
   private ListNode reverseList(ListNode node) {
     //    5->6->7->8
     // nH c  n
@@ -61,6 +62,19 @@ public class ReorderList {
     }
 
     return newHead;
+  }
+
+  // recursive
+  private ListNode reverseList2(ListNode node) {
+    if (node == null || node.next == null) {
+      return node;
+    }
+
+    ListNode next = reverseList2(node.next);
+    node.next.next = node;
+    node.next = null;
+
+    return next;
   }
 
   private void mergeLists(ListNode l1Head, ListNode l2Head) {
