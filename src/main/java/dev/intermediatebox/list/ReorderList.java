@@ -2,7 +2,7 @@ package dev.intermediatebox.list;
 // Tag: LinkedList
 // Tag: TwoPointers
 
-import dev.intermediatebox.string.ListNode;
+import dev.intermediatebox.list.utils.ListNode;
 
 // O(n) time complexity
 // O(1) space complexity

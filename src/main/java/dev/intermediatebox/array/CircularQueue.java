@@ -3,7 +3,7 @@ package dev.intermediatebox.array;
 // Tag: LinkedList
 // Tag: Queue
 
-import dev.intermediatebox.array.utils.DoublyLinkedListNode;
+import dev.intermediatebox.list.utils.DoublyLinkedListNode;
 
 // O(1) time complexity for all operations
 // O(n) space complexity for the queue

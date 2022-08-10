@@ -6,7 +6,7 @@ package dev.intermediatebox.tree;
 // Related:
 // ConvertSortedArrayToBinarySearchTree
 
-import dev.intermediatebox.string.ListNode;
+import dev.intermediatebox.list.utils.ListNode;
 import dev.intermediatebox.tree.utils.TreeNode;
 
 // O(n) time complexity (the list is traversed only once)

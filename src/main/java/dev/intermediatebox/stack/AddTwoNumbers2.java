@@ -1,6 +1,6 @@
 package dev.intermediatebox.stack;
 
-import dev.intermediatebox.string.ListNode;
+import dev.intermediatebox.list.utils.ListNode;
 
 import java.util.Stack;
 

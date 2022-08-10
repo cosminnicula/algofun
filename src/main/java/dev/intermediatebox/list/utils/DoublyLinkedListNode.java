@@ -1,4 +1,4 @@
-package dev.intermediatebox.array.utils;
+package dev.intermediatebox.list.utils;
 
 public class DoublyLinkedListNode {
   public int value;

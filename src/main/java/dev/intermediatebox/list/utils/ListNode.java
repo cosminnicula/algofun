@@ -1,4 +1,4 @@
-package dev.intermediatebox.string;
+package dev.intermediatebox.list.utils;
 
 public class ListNode {
   public int value;
