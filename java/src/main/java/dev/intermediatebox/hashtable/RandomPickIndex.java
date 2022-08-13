@@ -38,7 +38,7 @@ public class RandomPickIndex {
         }
       }
 
-      return new Random().nextInt(list.size());
+      return list.get(new Random().nextInt(list.size()));
     }
   }
 
@@ -65,7 +65,7 @@ public class RandomPickIndex {
 
     public int pick(int target) {
       List<Integer> indexes = map.get(target);
-      return new Random().nextInt(indexes.size());
+      return map.get(target).get(new Random().nextInt(indexes.size()));
     }
   }
 }

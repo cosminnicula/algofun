@@ -15,7 +15,7 @@
         }
       }
 
-      return Math.floor(Math.random() * indexes.length);
+      return indexes[Math.floor(Math.random() * indexes.length)];
     }
   }
 
@@ -37,7 +37,7 @@
     }
 
     pick(target: number): number {
-      return Math.floor(Math.random() * this.map.get(target)!.length);
+      return this.map.get(target)![Math.floor(Math.random() * this.map.get(target)!.length)];
     }
   }
 
