@@ -12,7 +12,7 @@ public class ListNodeRandom {
     this.value = value;
   }
 
-  ListNodeRandom(int value, ListNodeRandom next, ListNodeRandom random) {
+  public ListNodeRandom(int value, ListNodeRandom next, ListNodeRandom random) {
     this.value = value;
     this.next = next;
     this.random = random;
