@@ -1,5 +1,6 @@
 package dev.intermediatebox.multithreading.producerconsumer.simple.mixedlogic;
 
+// credits to Ionut :) https://dzone.com/articles/the-evolution-of-producer-consumer-problem-in-java
 public class ProducerConsumer {
   public static void main(String[] args) throws InterruptedException {
     ProducerConsumerQueue producerConsumerQueue = new ProducerConsumerQueue(2);
@@ -22,7 +23,6 @@ public class ProducerConsumer {
 
     consumerThread.start();
     producerThread.start();
-
 
     consumerThread.join();
     producerThread.join();
