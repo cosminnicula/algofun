@@ -4,12 +4,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class ProducerConsumerQueue {
-
-  private Queue<Integer> queue;
+  private Queue<Integer> list;
   private int size;
 
   public ProducerConsumerQueue(int size) {
-    this.queue = new LinkedList<>();
+    this.list = new LinkedList<>();
     this.size = size;
   }
 
@@ -43,12 +42,12 @@ public class ProducerConsumerQueue {
     int value = 0;
     while (true) {
       synchronized (this) {
-        while (queue.size() >= size) {
+        while (list.size() >= size) {
           // wait for the consumer
           wait();
         }
 
-        queue.add(value);
+        list.add(value);
 
         System.out.println(Thread.currentThread().getName() + " produced " + value);
 
@@ -64,12 +63,12 @@ public class ProducerConsumerQueue {
   public void consume() throws InterruptedException {
     while (true) {
       synchronized (this) {
-        while (queue.size() == 0) {
+        while (list.size() == 0) {
           // wait for the producer
           wait();
         }
 
-        int value = queue.poll();
+        int value = list.poll();
 
         System.out.println(Thread.currentThread().getName() + " consumed " + value);
 
