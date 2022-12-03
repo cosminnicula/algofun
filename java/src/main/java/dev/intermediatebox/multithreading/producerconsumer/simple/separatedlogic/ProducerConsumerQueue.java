@@ -20,7 +20,7 @@ public class ProducerConsumerQueue {
 
       list.add(value);
 
-//      System.out.println(Thread.currentThread().getName() + " produced " + value);
+      System.out.println(Thread.currentThread().getName() + " produced " + value);
 
       notify();
     }
@@ -34,7 +34,7 @@ public class ProducerConsumerQueue {
 
       int value = list.poll();
 
-//      System.out.println(Thread.currentThread().getName() + " consumed " + value);
+      System.out.println(Thread.currentThread().getName() + " consumed " + value);
 
       notify();
 
